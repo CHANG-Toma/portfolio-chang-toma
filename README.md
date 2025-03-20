@@ -1,36 +1,20 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Portfolio - CHANG Toma
 
-## Getting Started
+## 🚀 À propos
+Portfolio personnel développé avec des technologies modernes pour présenter mes projets et compétences.
 
-First, run the development server:
+## 💻 Technologies utilisées
+- [Next.js](https://nextjs.org/) - Framework React pour le développement web
+- [Shadcn/ui](https://ui.shadcn.com/) - Composants UI réutilisables
+- [Tailwind CSS](https://tailwindcss.com/) - Framework CSS utilitaire
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## 📁 Structure du projet
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🔗 Contact
+- Portfolio: [votre-site.com](https://votre-site.com)
+- LinkedIn: [CHANG Toma](https://www.linkedin.com/in/toma-chang/)
+- GitHub: [@CHANG-Toma](https://github.com/CHANG-Toma)
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 📝 License
+Ce projet est sous licence MIT - voir le fichier [LICENSE.md](LICENSE.md) pour plus de détails.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
