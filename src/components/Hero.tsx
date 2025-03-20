@@ -56,14 +56,12 @@ const Hero = () => {
             <AnimatedText 
               text={[
                 "Développeur Full-Stack",
-                "Passionné par le Web",
-                "Expert React & Node.js"
+                "Frontend & Backend",
+                "Un projet en vue ?",
+                "Contactez-moi !"
               ]}
               className="inline" 
               delay={0.8}
-              typingSpeed={80}
-              deletingSpeed={50}
-              pauseBetween={2000}
             />
           </motion.h2>
           
