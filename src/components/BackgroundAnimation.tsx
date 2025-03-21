@@ -46,8 +46,8 @@ const BackgroundAnimation = () => {
           x: Math.random() * width,
           y: Math.random() * height,
           size: Math.random() * 2 + 0.5,
-          speedX: (Math.random() - 0.5) * 0.2,
-          speedY: (Math.random() - 0.5) * 0.2,
+          speedX: (Math.random() - 0.5) * 0.8,
+          speedY: (Math.random() - 0.5) * 0.8,
           color: '#9b87f5',
           alpha: Math.random() * 0.6 + 0.1
         });

@@ -95,13 +95,13 @@ const Hero = () => {
             transition={{ duration: 0.5, delay: 0.5 }}
             className="relative"
           >
-            <div className="absolute inset-0 bg-purple rounded-full blur-2xl opacity-20 animate-pulse"></div>
-            <div className="relative overflow-hidden w-60 h-60 md:w-80 md:h-80 rounded-full border-2 border-purple/30 shadow-lg shadow-purple/20 transition-all duration-300">
+            <div className="absolute inset-0 bg-gray-200 rounded-full blur-2xl opacity-20 animate-pulse"></div>
+            <div className="relative overflow-hidden w-60 h-60 md:w-80 md:h-80 rounded-full transition-all duration-300">
               <img 
                 ref={imageRef}
-                src="/lovable-uploads/06bbd3e8-2701-4038-8394-db30abe19282.png" 
-                alt="Toma Chang" 
-                className="w-full h-full object-cover transition-all duration-300"
+                src="/images/CodeByToma.png" 
+                alt="Logo CodeByToma" 
+                className="w-full h-full transition-all duration-300 object-cover rounded-full"
               />
             </div>
           </motion.div>
