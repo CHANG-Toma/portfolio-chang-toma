@@ -13,8 +13,10 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Toma Chang",
-  description: "Développeur Full-Stack",
+  title: "Toma Chang - CodeByToma",
+  description:
+    "Bienvenue sur mon portfolio, je suis un développeur full-stack spécialisé dans la création d'applications web modernes et performantes.",
+  authors: [{ name: "Toma Chang", url: "https://github.com/CHANG-Toma" }],
 };
 
 export default function RootLayout({
@@ -32,7 +34,7 @@ export default function RootLayout({
         <title>Toma Chang - Développeur Full-Stack</title>
         <meta
           name="description"
-          content="Portfolio de Toma Chang, Développeur Full-Stack spécialisé dans la création d'applications web modernes et performantes."
+          content="Bienvenue sur mon portfolio, je suis un développeur full-stack spécialisé dans la création d'applications web modernes et performantes."
         />
         <meta name="author" content="Toma Chang" />
 
