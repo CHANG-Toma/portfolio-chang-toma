@@ -16,20 +16,30 @@ const Hero = () => {
       const x = e.clientX;
       const y = e.clientY;
       
-      // Calculate rotation based on mouse position
       const centerX = window.innerWidth / 2;
       const centerY = window.innerHeight / 2;
       
-      const rotateX = (y - centerY) / 30;
-      const rotateY = (centerX - x) / 30;
+      // Réduction de l'intensité de la rotation et ajout d'une transition plus douce
+      const rotateX = (y - centerY) / 45;
+      const rotateY = (centerX - x) / 45;
       
+      imageRef.current.style.transition = 'transform 0.3s ease-out';
       imageRef.current.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
+    };
+
+    // Réinitialisation de la position quand la souris quitte la fenêtre
+    const handleMouseLeave = () => {
+      if (!imageRef.current) return;
+      imageRef.current.style.transition = 'transform 0.5s ease-out';
+      imageRef.current.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg)';
     };
     
     window.addEventListener('mousemove', handleMouseMove);
+    window.addEventListener('mouseleave', handleMouseLeave);
     
     return () => {
       window.removeEventListener('mousemove', handleMouseMove);
+      window.removeEventListener('mouseleave', handleMouseLeave);
     };
   }, []);
 
@@ -90,9 +100,21 @@ const Hero = () => {
         
         <div className="order-1 md:order-2 flex justify-center">
           <motion.div
-            initial={{ opacity: 0, scale: 0.8 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.5, delay: 0.5 }}
+            initial={{ opacity: 0, scale: 0.8, y: 0 }}
+            animate={{ 
+              opacity: 1, 
+              scale: 1,
+              y: [0, -10, 0] // Animation de flottement
+            }}
+            transition={{ 
+              duration: 0.5,
+              delay: 0.5,
+              y: {
+                duration: 2,
+                repeat: Infinity,
+                ease: "easeInOut"
+              }
+            }}
             className="relative"
           >
             <div className="absolute inset-0 bg-gray-200 rounded-full blur-2xl opacity-20 animate-pulse"></div>
