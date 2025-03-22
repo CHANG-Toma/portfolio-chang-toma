@@ -14,12 +14,14 @@ const Index = () => {
     <div className="min-h-screen relative">
       <BackgroundAnimation />
       <Navbar />
-      <Hero />
-      <Experience />
-      <Projects />
-      <Skills />
-      <Contact />
-      <Footer />
+      <main className="relative z-[1]">
+        <Hero />
+        <Experience />
+        <Projects />
+        <Skills />
+        <Contact />
+        <Footer />
+      </main>
     </div>
   );
 };

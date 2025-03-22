@@ -3,10 +3,12 @@
 import React, { useEffect, useState } from 'react';
 import { Menu, X } from 'lucide-react';
 import { cn } from '@/lib/utils';
+import { createPortal } from 'react-dom';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const [mounted, setMounted] = useState(false);
 
   const navItems = [
     { name: 'Accueil', href: '#home' },
@@ -15,6 +17,10 @@ const Navbar = () => {
     { name: 'Compétences', href: '#skills' },
     { name: 'Contact', href: '#contact' }
   ];
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -34,14 +40,62 @@ const Navbar = () => {
     }
   }, [isOpen]);
 
+  const MobileMenu = () => {
+    if (!mounted) return null;
+
+    return createPortal(
+      <div 
+        className={cn(
+          'fixed left-0 top-0 w-full h-full bg-navy/98 backdrop-blur-md md:hidden',
+          'flex items-center justify-center',
+          'z-[9999]',
+          isOpen ? 'opacity-100 visible' : 'opacity-0 invisible pointer-events-none'
+        )}
+        style={{
+          transition: 'opacity 0.3s ease, visibility 0.3s ease'
+        }}
+      >
+        <button 
+          onClick={() => setIsOpen(false)} 
+          className="absolute top-4 right-6 text-white"
+          aria-label="Fermer le menu"
+        >
+          <X className="h-6 w-6 text-purple" />
+        </button>
+
+        <nav className="flex flex-col items-center space-y-8 p-8">
+          {navItems.map((item, i) => (
+            <a
+              key={item.name}
+              href={item.href}
+              className="text-xl font-mono text-lightSlate hover:text-purple transition-colors duration-300"
+              onClick={() => setIsOpen(false)}
+              style={{ 
+                transform: isOpen ? 'translateY(0)' : 'translateY(20px)',
+                opacity: isOpen ? 1 : 0,
+                transitionProperty: 'transform, opacity',
+                transitionDuration: '0.3s',
+                transitionTimingFunction: 'ease',
+                transitionDelay: isOpen ? `${i * 50}ms` : '0ms'
+              }}
+            >
+              {item.name}
+            </a>
+          ))}
+        </nav>
+      </div>,
+      document.body
+    );
+  };
+
   return (
     <header 
       className={cn(
-        'fixed top-0 w-full z-50 transition-all duration-300 py-4 px-6 md:px-12',
+        'fixed top-0 w-full z-[100] transition-all duration-300 py-4 px-6 md:px-12',
         scrolled ? 'backdrop-blur-lg bg-navy/80 shadow-lg' : 'bg-transparent'
       )}
     >
-      <div className="max-w-7xl mx-auto flex items-center justify-between">
+      <div className="max-w-7xl mx-auto flex items-center justify-between relative">
         <a 
           href="#home" 
           className="text-white font-mono text-lg md:text-xl font-bold"
@@ -70,45 +124,16 @@ const Navbar = () => {
           ))}
         </nav>
 
-        {/* Mobile menu button */}
+        {/* Mobile menu button - seulement pour ouvrir */}
         <button 
-          onClick={() => setIsOpen(!isOpen)} 
-          className="md:hidden text-white z-50"
-          aria-label={isOpen ? "Fermer le menu" : "Ouvrir le menu"}
+          onClick={() => setIsOpen(true)} 
+          className="md:hidden text-white relative z-[9999]"
+          aria-label="Ouvrir le menu"
         >
-          {isOpen ? (
-            <X className="h-6 w-6 text-purple" />
-          ) : (
-            <Menu className="h-6 w-6" />
-          )}
+          <Menu className="h-6 w-6" />
         </button>
 
-        {/* Mobile Navigation Overlay */}
-        <div 
-          className={cn(
-            'fixed inset-0 bg-lightNavy/95 backdrop-blur-lg z-40 flex flex-col items-center justify-center transition-all duration-300 ease-in-out md:hidden',
-            isOpen ? 'opacity-100 visible' : 'opacity-0 invisible'
-          )}
-        >
-          <nav className="flex flex-col items-center space-y-8 p-8">
-            {navItems.map((item, i) => (
-              <a
-                key={item.name}
-                href={item.href}
-                className="text-lg font-mono text-lightSlate hover:text-purple transition-colors duration-300"
-                onClick={() => setIsOpen(false)}
-                style={{ 
-                  transitionDelay: isOpen ? `${i * 50}ms` : '0ms',
-                  transform: isOpen ? 'translateY(0)' : 'translateY(20px)',
-                  opacity: isOpen ? 1 : 0,
-                  transition: 'transform 0.3s ease, opacity 0.3s ease'
-                }}
-              >
-                {item.name}
-              </a>
-            ))}
-          </nav>
-        </div>
+        <MobileMenu />
       </div>
     </header>
   );
