@@ -15,7 +15,7 @@ const Footer = () => {
             <Mail className="w-5 h-5" />
           </a>
           <a 
-            href="https://github.com" 
+            href="https://github.com/CHANG-Toma" 
             target="_blank" 
             rel="noopener noreferrer"
             className="text-lightSlate hover:text-purple transition-colors duration-300"
@@ -36,8 +36,8 @@ const Footer = () => {
         
         <p className="text-lightSlate text-sm flex items-center">
           <span>Conçu et développé par Toma Chang</span>
-          <Heart className="w-4 h-4 text-purple mx-2 animate-pulse" />
-          <span>2024</span>
+          <Heart className="w-4 h-4 text-purple mx-2 animate-pulse " />
+          <span>2025</span>
         </p>
       </div>
     </footer>
