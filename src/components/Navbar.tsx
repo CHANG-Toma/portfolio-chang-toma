@@ -105,13 +105,9 @@ const Navbar = () => {
                   transition: 'transform 0.3s ease, opacity 0.3s ease'
                 }}
               >
-                <span className="text-purple mr-2">0{i + 1}.</span>
                 {item.name}
               </a>
             ))}
-            <Button className="bg-transparent hover:bg-purple/10 text-purple border border-purple rounded px-6 py-3 text-lg font-mono transition-all duration-300 mt-4">
-              CV
-            </Button>
           </nav>
         </div>
       </div>
