@@ -17,6 +17,7 @@ export const metadata: Metadata = {
   description:
     "Bienvenue sur mon portfolio, je suis un développeur full-stack spécialisé dans la création d'applications web modernes et performantes.",
   authors: [{ name: "Toma Chang", url: "https://github.com/CHANG-Toma" }],
+  keywords: ["Toma Chang", "Développeur Full-Stack", "CodeByToma", "Portfolio", "Projet", "Contact", "Développeur", "Full-Stack", "Développeur Full-Stack", "CodeByToma", "Portfolio", "Projet", "Contact", "Développeur", "Full-Stack", "Développeur Full-Stack", "Toma Chang", "Développeur Full-Stack", "CodeByToma", "Portfolio", "Projet", "Contact", "Développeur", "Full-Stack", "Développeur Full-Stack", "CodeByToma", "Portfolio", "Projet", "Contact", "Développeur", "Full-Stack" ],
 };
 
 export default function RootLayout({
@@ -37,6 +38,7 @@ export default function RootLayout({
           content="Bienvenue sur mon portfolio, je suis un développeur full-stack spécialisé dans la création d'applications web modernes et performantes."
         />
         <meta name="author" content="Toma Chang" />
+        <meta name="keywords" content="Toma Chang, Développeur Full-Stack, CodeByToma, Portfolio, Projet, Contact, Développeur, Full-Stack, Développeur Full-Stack, CodeByToma, Portfolio, Projet, Contact, Développeur, Full-Stack, Développeur Full-Stack, Toma Chang, Développeur Full-Stack, CodeByToma, Portfolio, Projet, Contact, Développeur, Full-Stack, Développeur Full-Stack, CodeByToma, Portfolio, Projet, Contact, Développeur, Full-Stack" />
       </head>
 
       <body
