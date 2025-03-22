@@ -75,13 +75,22 @@ const Projects = () => {
           {projects.filter(p => !p.featured).map((project, i) => (
             <ProjectCard key={i} {...project} />
           ))}
-          <div className="flex justify-center items-center">
+          <motion.div 
+            className="flex justify-center items-center"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+            viewport={{ once: true }}
+          >
             <Button
               onClick={() => window.open('https://github.com/CHANG-Toma', '_blank', 'noopener,noreferrer')}
+              className="group transition-all duration-300 hover:scale-105"
+              variant="outline"
             >
-              Voir plus sur GitHub <ArrowRight className="w-4 h-4" />
+              Voir plus sur GitHub
+              <ArrowRight className="w-4 h-4 ml-2 transition-transform group-hover:translate-x-1" />
             </Button>
-          </div>
+          </motion.div>
         </div>
       </div>  
     </section>

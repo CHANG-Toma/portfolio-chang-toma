@@ -2,7 +2,7 @@
 import React, { useRef } from 'react';
 import { motion, useInView } from 'framer-motion';
 import { 
-  Phone, Mail, Linkedin, MapPin, Car, Send
+  Phone, Mail, Linkedin, MapPin
 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
@@ -35,11 +35,6 @@ const Contact = () => {
       text: 'Île-de-France, 78180',
       href: 'https://maps.google.com/?q=78180,France'
     },
-    { 
-      icon: <Car className="w-5 h-5 text-purple" />, 
-      text: 'Permis B et véhicule',
-      href: '#'
-    },
   ];
 
   const handleSubmit = (e: React.FormEvent) => {
@@ -65,7 +60,6 @@ const Contact = () => {
           className="mb-12 flex items-center"
         >
           <h2 className="text-3xl md:text-4xl font-bold text-white">
-            <span className="text-purple font-mono mr-2">05.</span>
             Contact
           </h2>
           <div className="ml-4 flex-grow h-[1px] bg-lightNavy"></div>
@@ -80,8 +74,7 @@ const Contact = () => {
           >
             <h3 className="text-2xl font-bold text-white mb-6">Discutons de votre projet</h3>
             <p className="text-lightSlate mb-8">
-              Je suis actuellement disponible pour des missions freelance et intéressé par des opportunités 
-              professionnelles en développement web. N'hésitez pas à me contacter !
+              Je suis actuellement disponible pour des missions freelance. N'hésitez pas à me contacter !
             </p>
             
             <ul className="space-y-4">
@@ -111,55 +104,34 @@ const Contact = () => {
             </ul>
           </motion.div>
           
+          {/* Bouton me contacter */}
           <motion.div
             initial={{ opacity: 0, x: 20 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5 }}
             viewport={{ once: true }}
+            className="flex justify-center items-center"
           >
-            <div className="glassmorphism p-8 rounded-lg shadow-lg">
-              <h3 className="text-2xl font-bold text-white mb-6">Envoyez-moi un message</h3>
-              <form ref={formRef} onSubmit={handleSubmit} className="space-y-4">
-                <div>
-                  <Input 
-                    type="text" 
-                    placeholder="Nom"
-                    className="bg-navy/50 border-lightNavy focus:border-purple h-12"
-                    required
-                  />
-                </div>
-                <div>
-                  <Input 
-                    type="email" 
-                    placeholder="Email"
-                    className="bg-navy/50 border-lightNavy focus:border-purple h-12"
-                    required
-                  />
-                </div>
-                <div>
-                  <Input 
-                    type="text" 
-                    placeholder="Sujet"
-                    className="bg-navy/50 border-lightNavy focus:border-purple h-12"
-                    required
-                  />
-                </div>
-                <div>
-                  <Textarea 
-                    placeholder="Message"
-                    className="bg-navy/50 border-lightNavy focus:border-purple resize-none min-h-32"
-                    required
-                  />
-                </div>
-                <Button 
-                  type="submit" 
-                  className="w-full bg-purple hover:bg-purple/90 text-white flex items-center justify-center gap-2"
+            <motion.div
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+            >
+              <Button 
+                asChild
+                className="px-8 py-6 text-lg font-semibold bg-purple hover:bg-purple/80 
+                          shadow-[0_0_15px_rgba(124,58,237,0.5)] 
+                          hover:shadow-[0_0_25px_rgba(124,58,237,0.7)] 
+                          transition-all duration-300"
+              >
+                <a 
+                  href="mailto:toma11chang@gmail.com" 
+                  className="flex items-center gap-2"
                 >
-                  <Send className="w-4 h-4" />
-                  Envoyer
-                </Button>
-              </form>
-            </div>
+                  <Mail className="w-5 h-5" />
+                  <span>Me contacter</span>
+                </a>
+              </Button>
+            </motion.div>
           </motion.div>
         </div>
       </div>
