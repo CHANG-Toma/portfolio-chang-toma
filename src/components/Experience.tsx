@@ -79,16 +79,16 @@ const Experience = () => {
   const isInView = useInView(ref, { once: false, amount: 0.1 });
 
   return (
-    <section id="experience" className="py-20 px-6 md:px-12 relative">
+    <section id="experience" className="py-12 sm:py-20 px-4 sm:px-6 md:px-12 relative">
       <div className="max-w-7xl mx-auto">
         <motion.div
           ref={ref}
           initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
           transition={{ duration: 0.5 }}
-          className="mb-12 flex items-center"
+          className="mb-8 sm:mb-12 flex items-center"
         >
-          <h2 className="text-3xl md:text-4xl font-bold text-white">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white">
             Expériences
           </h2>
           <div className="ml-4 flex-grow h-[1px] bg-lightNavy"></div>
@@ -98,13 +98,13 @@ const Experience = () => {
           <div className="md:grid md:grid-cols-3 rounded-lg overflow-hidden">
             {/* Tab navigation */}
             <div className="bg-lightNavy/50 p-2 md:p-0">
-              <div className="flex md:flex-col overflow-x-auto md:overflow-visible scrollbar-hide">
+              <div className="flex md:flex-col overflow-x-auto md:overflow-visible scrollbar-hide -mx-2 sm:mx-0">
                 {experiences.map((exp) => (
                   <button
                     key={exp.id}
                     onClick={() => setActiveTab(exp.id)}
                     className={cn(
-                      "py-4 px-6 font-mono text-sm whitespace-nowrap md:whitespace-normal text-left transition-all duration-300 hover:bg-navy/30 hover:text-purple",
+                      "py-3 sm:py-4 px-4 sm:px-6 font-mono text-xs sm:text-sm whitespace-nowrap md:whitespace-normal text-left transition-all duration-300 hover:bg-navy/30 hover:text-purple min-w-[120px] sm:min-w-0",
                       activeTab === exp.id
                         ? "text-purple border-l-0 md:border-l-2 border-b-2 md:border-b-0 border-purple bg-lightNavy"
                         : "text-lightSlate border-l-0 md:border-l-2 border-b-2 md:border-b-0 border-lightNavy"
@@ -117,7 +117,7 @@ const Experience = () => {
             </div>
 
             {/* Tab content */}
-            <div className="col-span-2 p-6 md:p-8">
+            <div className="col-span-2 p-4 sm:p-6 md:p-8">
               {experiences.map((exp) => (
                 <motion.div
                   key={exp.id}
@@ -130,7 +130,7 @@ const Experience = () => {
                     display: activeTab === exp.id ? 'block' : 'none'
                   }}
                 >
-                  <h3 className="text-xl md:text-2xl font-bold text-white mb-1">
+                  <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-white mb-1">
                     {exp.title} <span className="text-purple">@{exp.company.split(' - ')[1]}</span>
                   </h3>
                   
@@ -154,11 +154,11 @@ const Experience = () => {
                     ))}
                   </ul>
 
-                  <div className="flex flex-wrap gap-2 mt-4">
+                  <div className="flex flex-wrap gap-1.5 sm:gap-2 mt-4">
                     {exp.technologies.map((tech, i) => (
                       <span 
                         key={i} 
-                        className="bg-navy px-3 py-1 rounded-full text-xs font-mono text-purple"
+                        className="bg-navy px-2 sm:px-3 py-1 rounded-full text-[10px] sm:text-xs font-mono text-purple"
                       >
                         {tech}
                       </span>
