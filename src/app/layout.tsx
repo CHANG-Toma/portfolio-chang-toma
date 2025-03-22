@@ -37,9 +37,6 @@ export default function RootLayout({
           content="Bienvenue sur mon portfolio, je suis un développeur full-stack spécialisé dans la création d'applications web modernes et performantes."
         />
         <meta name="author" content="Toma Chang" />
-
-        {/* Importation du css */}
-        <link rel="stylesheet" href="./globals.css" />
       </head>
 
       <body

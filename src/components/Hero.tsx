@@ -5,7 +5,7 @@ import { motion } from 'framer-motion';
 import AnimatedText from './AnimatedText';
 import { ChevronDown } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-
+import Image from 'next/image';
 const Hero = () => {
   const imageRef = useRef<HTMLImageElement>(null);
 
@@ -81,8 +81,8 @@ const Hero = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.3 }}
           >
-            Spécialisé dans la conception et le développement d'applications web modernes
-            et d'expériences digitales exceptionnelles.
+            Spécialisé dans la conception et le développement d&apos;applications web modernes
+            et d&apos;expériences digitales exceptionnelles.
           </motion.p>
           
           <motion.div
@@ -119,10 +119,12 @@ const Hero = () => {
           >
             <div className="absolute inset-0 bg-gray-200 rounded-full blur-2xl opacity-20 animate-pulse"></div>
             <div className="relative overflow-hidden w-60 h-60 md:w-80 md:h-80 rounded-full transition-all duration-300">
-              <img 
+              <Image
                 ref={imageRef}
                 src="/images/CodeByToma.png" 
-                alt="Logo CodeByToma" 
+                alt="Logo CodeByToma"
+                width={320}
+                height={320}
                 className="w-full h-full transition-all duration-300 object-cover rounded-full"
               />
             </div>

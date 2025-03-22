@@ -4,20 +4,12 @@ import React, { useRef } from "react";
 import { motion, useInView } from "framer-motion";
 import SkillCard from "./SkillCard";
 import {
-  Figma,
   Code2,
   Database,
-  Server,
-  Globe,
   Laptop,
   Terminal,
   GitBranch,
   Layout,
-  UserCheck,
-  Hammer,
-  FileBadge,
-  BookOpen,
-  PencilIcon,
 } from "lucide-react";
 
 const Skills = () => {

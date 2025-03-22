@@ -5,13 +5,9 @@ import {
   Phone, Mail, Linkedin, MapPin
 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
-import { Textarea } from '@/components/ui/textarea';
-import { toast } from '@/components/ui/use-toast';
 
 const Contact = () => {
   const ref = useRef<HTMLDivElement>(null);
-  const formRef = useRef<HTMLFormElement>(null);
   const isInView = useInView(ref, { once: false, amount: 0.1 });
   
   const contactInfo = [
@@ -36,18 +32,6 @@ const Contact = () => {
       href: 'https://maps.google.com/?q=78180,France'
     },
   ];
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    toast({
-      title: "Message envoyé !",
-      description: "Merci pour votre message. Je vous répondrai dans les plus brefs délais.",
-    });
-    
-    if (formRef.current) {
-      formRef.current.reset();
-    }
-  };
 
   return (
     <section id="contact" className="py-20 px-6 md:px-12 relative">
@@ -74,7 +58,7 @@ const Contact = () => {
           >
             <h3 className="text-2xl font-bold text-white mb-6">Discutons de votre projet</h3>
             <p className="text-lightSlate mb-8">
-              Je suis actuellement disponible pour des missions freelance. N'hésitez pas à me contacter !
+              Je suis actuellement disponible pour des missions freelance. N&apos;hésitez pas à me contacter !
             </p>
             
             <ul className="space-y-4">

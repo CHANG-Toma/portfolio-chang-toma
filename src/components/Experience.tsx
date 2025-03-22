@@ -1,7 +1,7 @@
 "use client";
 import React, { useRef, useState } from 'react';
 import { motion, useInView } from 'framer-motion';
-import { Calendar, MapPin, Briefcase, ArrowRight } from 'lucide-react';
+import { Calendar, MapPin, ArrowRight } from 'lucide-react';
 import { cn } from '@/lib/utils';
 
 interface ExperienceItem {

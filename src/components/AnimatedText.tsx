@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useMemo, useState } from 'react';
 import { motion } from 'framer-motion';
 
 interface AnimatedTextProps {
@@ -14,7 +14,7 @@ const AnimatedText: React.FC<AnimatedTextProps> = ({
   className = "", 
   delay = 0
 }) => {
-  const phrases = Array.isArray(text) ? text : [text];
+  const phrases = useMemo(() => Array.isArray(text) ? text : [text], [text]);
   const [currentPhraseIndex, setCurrentPhraseIndex] = useState(0);
   const [displayText, setDisplayText] = useState("");
   const [isDeleting, setIsDeleting] = useState(false);

@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Github, ExternalLink, Folder, FolderOpen } from 'lucide-react';
-import { cn } from '@/lib/utils';
+import Image from 'next/image';
 
 interface ProjectProps {
   title: string;
@@ -88,7 +88,7 @@ const ProjectCard = ({
             {image ? (
               <>
                 <div className="absolute inset-0 bg-purple/30 z-10 mix-blend-multiply"></div>
-                <img 
+                <Image
                   src={image} 
                   alt={title} 
                   className="w-full h-full object-cover"
