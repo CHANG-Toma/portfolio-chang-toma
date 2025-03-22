@@ -69,9 +69,6 @@ const Navbar = () => {
               {item.name}
             </a>
           ))}
-          <Button className="bg-transparent hover:bg-purple/10 text-purple border border-purple rounded px-4 py-2 text-sm font-mono transition-all duration-300">
-            CV
-          </Button>
         </nav>
 
         {/* Mobile menu button */}

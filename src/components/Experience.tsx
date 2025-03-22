@@ -17,37 +17,37 @@ interface ExperienceItem {
 const experiences: ExperienceItem[] = [
   {
     id: 'lamusee',
-    title: 'Développeur Full-Stack',
-    company: 'Alternance - Lamusée Paris',
+    title: 'Alternance - Développeur Full-Stack',
+    company: ' - Lamusée Paris',
     location: 'Paris',
-    date: '2024 - 2025',
+    date: '2024 - 2027',
     description: [
-      "Développement et conception d'une plateforme administrateur / Shopify",
+      "Développement et conception d'une plateforme administrateur + Site web Shopify",
       "Mise en place d'une interface utilisateur responsive et interactive",
       "Collaboration avec l'équipe design pour l'UI/UX",
       "Optimisation des performances de l'application"
     ],
-    technologies: ['Symfony', 'MySQL', 'Tailwind CSS', 'VueCode', 'JavaScript', 'PHP']
+    technologies: ['Docker', 'Symfony', 'Tailwind CSS', 'MySQL', 'JavaScript', 'phpMyAdmin']
   },
   {
     id: 'codebytoma',
-    title: 'Développeur Full-Stack',
-    company: 'Freelance - CodeByToma',
-    location: 'Île-de-France',
-    date: 'Mai 2024',
+    title: 'Freelance - Développeur Full-Stack',
+    company: ' - CodeByToma',
+    location: 'Paris',
+    date: 'Mai 2024 - Aujourd\'hui',
     description: [
+      'Service Freelance pour la création de sites web et applications web (intranet, extranet, etc.)',
       'Conception et développement de sites web adaptés aux besoins des clients',
       'Maintenance et mise à jour régulière des projets existants',
-      'Conseil technique et accompagnement des clients',
       'Développement de fonctionnalités spécifiques sur mesure'
     ],
-    technologies: ['Symfony', 'Vue.js', 'PostgreSQL', 'Bootstrap', 'VueCode', 'JavaScript', 'PHP']
+    technologies: ['React', 'Next.js', 'Node.js', 'Symfony', 'Laravel', 'PostgreSQL', 'MySQL', 'Bootstrap', 'Tailwind CSS', 'Git', 'Docker']
   },
   {
-    id: 'apprentissage',
-    title: 'Développeur apprentissage',
-    company: 'Alternance - Apprentissage',
-    location: 'Paris',
+    id: 'numericli',
+    title: 'Alternance - Développeur Full-Stack',
+    company: ' - Numericli',
+    location: 'Île-de-France',
     date: 'Octobre 2022 - Août 2023',
     description: [
       "Charge de développement d'applications web",
@@ -55,12 +55,12 @@ const experiences: ExperienceItem[] = [
       "Mise à jour et maintenance du site web de l'entreprise",
       'Participation aux réunions de projet et aux phases de conception'
     ],
-    technologies: ['HTML/CSS', 'JavaScript', 'PHP', 'MySQL']
+    technologies: ['PHP', 'Symfony', 'MySQL', 'Tailwind CSS', 'JavaScript', 'Docker']
   },
   {
-    id: 'secredo',
-    title: 'Stage',
-    company: 'Banque Secredo',
+    id: 'socredo',
+    title: 'Stage - Développeur Full-Stack',
+    company: ' - Banque Socredo',
     location: 'Paris',
     date: 'Juin - Juillet 2022',
     description: [
@@ -69,7 +69,7 @@ const experiences: ExperienceItem[] = [
       'Intégration de fonctionnalités spécifiques au secteur bancaire',
       'Tests et débogage des applications développées'
     ],
-    technologies: ['Symfony', 'Tailwind', 'MySQL', 'VueCode', 'JavaScript', 'PHP']
+    technologies: ['Symfony', 'Tailwind', 'MySQL', 'JavaScript', 'PHP']
   }
 ];
 
@@ -89,7 +89,6 @@ const Experience = () => {
           className="mb-12 flex items-center"
         >
           <h2 className="text-3xl md:text-4xl font-bold text-white">
-            <span className="text-purple font-mono mr-2">02.</span>
             Expériences
           </h2>
           <div className="ml-4 flex-grow h-[1px] bg-lightNavy"></div>
@@ -123,9 +122,13 @@ const Experience = () => {
                 <motion.div
                   key={exp.id}
                   initial={{ opacity: 0, x: 20 }}
-                  animate={activeTab === exp.id ? { opacity: 1, x: 0 } : { opacity: 0, x: 20, display: 'none' }}
+                  animate={activeTab === exp.id 
+                    ? { opacity: 1, x: 0 } 
+                    : { opacity: 0, x: 20 }}
                   transition={{ duration: 0.3 }}
-                  className={activeTab === exp.id ? 'block' : 'hidden'}
+                  style={{
+                    display: activeTab === exp.id ? 'block' : 'none'
+                  }}
                 >
                   <h3 className="text-xl md:text-2xl font-bold text-white mb-1">
                     {exp.title} <span className="text-purple">@{exp.company.split(' - ')[1]}</span>
