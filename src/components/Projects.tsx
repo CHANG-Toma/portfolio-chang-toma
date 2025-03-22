@@ -3,6 +3,8 @@
 import React, { useRef } from 'react';
 import { motion, useInView } from 'framer-motion';
 import ProjectCard from './ProjectCard';
+import { Button } from './ui/button';
+import { ArrowRight } from 'lucide-react';
 
 const Projects = () => {
   const ref = useRef<HTMLDivElement>(null);
@@ -66,15 +68,22 @@ const Projects = () => {
         </div>
 
         <h3 className="text-2xl font-bold text-white text-center mb-12">
-          Autres projets intéressants
+          Autres projets intéressants{" "}
         </h3>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {projects.filter(p => !p.featured).map((project, i) => (
             <ProjectCard key={i} {...project} />
           ))}
+          <div className="flex justify-center items-center">
+            <Button
+              onClick={() => window.open('https://github.com/CHANG-Toma', '_blank', 'noopener,noreferrer')}
+            >
+              Voir plus sur GitHub <ArrowRight className="w-4 h-4" />
+            </Button>
+          </div>
         </div>
-      </div>
+      </div>  
     </section>
   );
 };
