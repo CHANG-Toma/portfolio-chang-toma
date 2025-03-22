@@ -13,11 +13,27 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Toma Chang - CodeByToma",
+  title: "Toma Chang - Développeur Full-Stack",
   description:
     "Bienvenue sur mon portfolio, je suis un développeur full-stack spécialisé dans la création d'applications web modernes et performantes.",
   authors: [{ name: "Toma Chang", url: "https://github.com/CHANG-Toma" }],
-  keywords: ["Toma Chang", "Développeur Full-Stack", "CodeByToma", "Portfolio", "Projet", "Contact", "Développeur", "Full-Stack", "Développeur Full-Stack", "CodeByToma", "Portfolio", "Projet", "Contact", "Développeur", "Full-Stack", "Développeur Full-Stack", "Toma Chang", "Développeur Full-Stack", "CodeByToma", "Portfolio", "Projet", "Contact", "Développeur", "Full-Stack", "Développeur Full-Stack", "CodeByToma", "Portfolio", "Projet", "Contact", "Développeur", "Full-Stack" ],
+  keywords: [
+    "Développeur Full-Stack",
+    "CodeByToma",
+    "Portfolio",
+    "Projet",
+    "Contact",
+    "Développeur",
+    "Full-Stack",
+    "CHANG Toma",
+    "toma chang",
+    "toma",
+    "chang",
+    "toma chang portfolio",
+    "toma chang github",
+    "toma chang linkedin",
+    "toma chang instagram",
+  ],
 };
 
 export default function RootLayout({
@@ -27,20 +43,6 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="fr">
-      <head>
-        <meta charSet="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-        {/* SEO */}
-        <title>Toma Chang - Développeur Full-Stack</title>
-        <meta
-          name="description"
-          content="Bienvenue sur mon portfolio, je suis un développeur full-stack spécialisé dans la création d'applications web modernes et performantes."
-        />
-        <meta name="author" content="Toma Chang" />
-        <meta name="keywords" content="Toma Chang, Développeur Full-Stack, CodeByToma, Portfolio, Projet, Contact, Développeur, Full-Stack, Développeur Full-Stack, CodeByToma, Portfolio, Projet, Contact, Développeur, Full-Stack, Développeur Full-Stack, Toma Chang, Développeur Full-Stack, CodeByToma, Portfolio, Projet, Contact, Développeur, Full-Stack, Développeur Full-Stack, CodeByToma, Portfolio, Projet, Contact, Développeur, Full-Stack" />
-      </head>
-
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
