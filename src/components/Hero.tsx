@@ -125,6 +125,7 @@ const Hero = () => {
                 alt="Logo CodeByToma"
                 width={320}
                 height={320}
+                priority={true}
                 className="w-full h-full transition-all duration-300 object-cover rounded-full"
               />
             </div>
@@ -133,13 +134,13 @@ const Hero = () => {
       </div>
       
       <motion.div 
-        className="absolute bottom-10 left-1/2 transform -translate-x-1/2 flex flex-col items-center"
+        className="absolute bottom-4 sm:bottom-10 left-1/2 transform -translate-x-1/2 flex flex-col items-center"
         initial={{ opacity: 0, y: 10 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5, delay: 1.2 }}
       >
-        <p className="text-lightSlate mb-2 text-sm font-mono">Explorer plus</p>
-        <ChevronDown className="w-6 h-6 text-purple animate-bounce" />
+        <p className="text-lightSlate mb-1 sm:mb-2 text-xs sm:text-sm font-mono">Explorer plus</p>
+        <ChevronDown className="w-5 h-5 sm:w-6 sm:h-6 text-purple animate-bounce" />
       </motion.div>
     </section>
   );
