@@ -20,28 +20,28 @@ const experiences: ExperienceItem[] = [
     title: 'Alternance - Développeur Full-Stack',
     company: ' - Lamusée Paris',
     location: 'Paris',
-    date: '2024 - 2027',
+    date: '2024 - 2026',
     description: [
-      "Développement et conception d'une plateforme administrateur + Site web Shopify",
-      "Mise en place d'une interface utilisateur responsive et interactive",
-      "Collaboration avec l'équipe design pour l'UI/UX",
-      "Optimisation des performances de l'application"
+      "Seul développeur en poste : gestion autonome de l'ensemble des projets informatiques (architecture, développement, mise en production, maintenance)",
+      "Conception d'une plateforme administrateur et client (clients, devis, factures, paiements, produits)",
+      "Choix techniques et déploiement en autonomie complète",
+      "Mise en place d'interfaces responsive et optimisation des performances"
     ],
-    technologies: ['Docker', 'Symfony', 'Tailwind CSS', 'MySQL', 'JavaScript', 'phpMyAdmin']
+      technologies: ['Symfony', 'Tailwind CSS', 'PostgreSQL', 'Docker', 'o2switch', 'Git'],
   },
   {
     id: 'codebytoma',
     title: 'Freelance - Développeur Full-Stack',
     company: ' - CodeByToma',
-    location: 'Paris',
-    date: 'Mai 2024 - Aujourd\'hui',
+    location: 'Île-de-France',
+    date: 'Mai 2024 - 2026',
     description: [
-      'Service Freelance pour la création de sites web et applications web (intranet, extranet, etc.)',
-      'Conception et développement de sites web adaptés aux besoins des clients',
+      'Conception et développement de sites web et applications web (intranet, extranet, etc.)',
       'Maintenance et mise à jour régulière des projets existants',
-      'Développement de fonctionnalités spécifiques sur mesure'
+      'Développement de fonctionnalités spécifiques sur mesure',
+      'Accompagnement client de la conception à la livraison'
     ],
-    technologies: ['React', 'Next.js', 'Node.js', 'Symfony', 'Laravel', 'PostgreSQL', 'MySQL', 'Bootstrap', 'Tailwind CSS', 'Git', 'Docker']
+    technologies: ['React', 'Next.js', 'Symfony', 'Laravel', 'PostgreSQL', 'MySQL', 'Tailwind CSS', 'Vercel', 'Git', 'Docker']
   },
   {
     id: 'numericli',
@@ -50,12 +50,12 @@ const experiences: ExperienceItem[] = [
     location: 'Île-de-France',
     date: 'Octobre 2022 - Août 2023',
     description: [
-      "Charge de développement d'applications web",
+      "Conception et développement d'une application métier de maintenance",
       "Conception et développement d'un intranet",
       "Mise à jour et maintenance du site web de l'entreprise",
       'Participation aux réunions de projet et aux phases de conception'
     ],
-    technologies: ['PHP', 'Symfony', 'MySQL', 'Tailwind CSS', 'JavaScript', 'Docker']
+    technologies: ['Laravel', 'Symfony', 'MySQL', 'JavaScript', 'Bootstrap', 'PhpMyAdmin']
   },
   {
     id: 'socredo',
@@ -64,12 +64,12 @@ const experiences: ExperienceItem[] = [
     location: 'Paris',
     date: 'Juin - Juillet 2022',
     description: [
-      "Développement d'un portail applicatif métier",
+      "Développement et maintenance d'un portail applicatif métier",
       'Collaboration avec les équipes métier pour comprendre les besoins',
       'Intégration de fonctionnalités spécifiques au secteur bancaire',
       'Tests et débogage des applications développées'
     ],
-    technologies: ['Symfony', 'Tailwind', 'MySQL', 'JavaScript', 'PHP']
+    technologies: ['Symfony', 'Tailwind CSS', 'MySQL', 'JavaScript', 'PHP', 'Docker']
   }
 ];
 

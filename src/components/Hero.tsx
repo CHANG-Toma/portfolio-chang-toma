@@ -66,9 +66,9 @@ const Hero = () => {
             <AnimatedText 
               text={[
                 "Développeur Full-Stack",
-                "Frontend & Backend",
-                "Un projet en vue ?",
-                "Contactez-moi !"
+                "Freelance & alternance",
+                "Master Ensitech",
+                "Un projet en vue ?"
               ]}
               className="inline" 
               delay={0.8}
@@ -84,15 +84,34 @@ const Hero = () => {
             Spécialisé dans la conception et le développement d&apos;applications web modernes
             et d&apos;expériences digitales exceptionnelles.
           </motion.p>
+
+          <motion.p
+            className="text-sm text-lightSlate/90 mb-6"
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.35 }}
+          >
+            Basé en Yvelines (78180) — Disponible en freelance et alternance (dernière année de Master)
+          </motion.p>
           
           <motion.div
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.4 }}
+            className="flex flex-wrap gap-3"
           >
             <a href="#projects">
               <Button className="bg-purple hover:bg-purple/90 text-white px-8 py-6 rounded text-lg transition-all duration-300 shadow-lg shadow-purple/20">
                 Découvrir mes projets
+              </Button>
+            </a>
+            <a
+              href="https://canva.link/iguu1b4afrg4oy0"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Button variant="outline" className="px-8 py-6 rounded text-lg">
+                Voir mon CV
               </Button>
             </a>
           </motion.div>

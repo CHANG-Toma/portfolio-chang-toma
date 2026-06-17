@@ -12,36 +12,60 @@ const Projects = () => {
 
   const projects = [
     {
-      title: 'Lamusée Paris - Intranet',
-      description: 'Plateforme administrateur permettant la gestion de clients, commandes, factures, paiements et produits.',
-      technologies: ['Docker', 'Symfony', 'Tailwind CSS', 'MySQL', 'JavaScript', 'phpMyAdmin'],
-      featured: true
+      title: 'Lamusée Paris — Plateforme admin & client',
+      description:
+        "Seul développeur en poste : conception et développement d'une plateforme administrateur et client pour la gestion des clients, devis, factures, paiements et produits. Autonomie complète de l'architecture à la mise en production.",
+      technologies: ['Symfony', 'Tailwind CSS', 'PostgreSQL', 'Docker', 'o2switch'],
+      featured: true,
+    },
+    {
+      title: 'MaxiLoc — Gestion locative',
+      description:
+        "Application web de gestion immobilière permettant de suivre la rentabilité des investissements locatifs : réservations, charges, rapports et analyses de performance.",
+      technologies: ['Next.js', 'React', 'TypeScript', 'Docker', 'Nginx', 'Recharts', 'Bootstrap'],
+      github: 'https://github.com/CHANG-Toma/maxi-loc',
+      featured: true,
     },
     {
       title: 'CodeByToma',
-      description: 'Application web gérant mes services freelance, incluant un système de gestion de projets, facturation et communication avec les clients.',
-      technologies: ['Next.js', 'React', 'Node.js', 'MySQL', 'Tailwind CSS', 'Git', 'Docker'],
+      description:
+        "Application web gérant mes services freelance : présentation de l'offre, gestion de projets et communication avec les clients.",
+      technologies: ['React', 'Next.js', 'Tailwind CSS', 'Vercel'],
+      demo: 'https://www.codebytoma.dev/',
+    },
+    {
+      title: 'Portfolio — CodeByToma',
+      description:
+        "Portfolio personnel présentant mon parcours, mes compétences et mes projets avec une interface moderne, animée et responsive.",
+      technologies: ['Next.js', 'React', 'TypeScript', 'Tailwind CSS', 'shadcn/ui'],
+      github: 'https://github.com/CHANG-Toma/portfolio-chang-toma',
+      demo: 'https://www.codebytoma.dev/',
+    },
+    {
+      title: 'Ecoride',
+      description:
+        "Projet de développement web autour de la mobilité durable, avec une architecture moderne en TypeScript.",
+      technologies: ['TypeScript', 'React', 'Next.js'],
+      github: 'https://github.com/CHANG-Toma/Ecoride',
     },
     {
       title: 'NexaFrame CMS',
-      description: 'Développement d\'un Content Management Framework en PHP conçu pour une flexibilité et performance optimales. Système modulaire permettant une personnalisation complète pour les besoins spécifiques des clients.',
-      technologies: ['PHP', 'HTML/CSS', 'JavaScript', 'MySQL', 'POO'],
+      description:
+        "Content Management Framework en PHP conçu pour la flexibilité et la performance. Système modulaire personnalisable selon les besoins métier.",
+      technologies: ['PHP', 'MySQL', 'JavaScript', 'HTML/CSS', 'POO'],
+      github: 'https://github.com/CHANG-Toma/NexaFrame',
     },
     {
-      title: 'Plateforme de Gestion Location',
-      description: 'Application web complète de gestion de locations immobilières, permettant la gestion des locations et de leurs rentabilités.',
-      technologies: ['React', 'Node.js', 'Next.js', 'MySQL', 'Tailwind CSS', 'Git', 'Docker'],
-      featured: true
+      title: 'Numericli — Application maintenance',
+      description:
+        "Application métier développée en alternance pour gérer les tâches de maintenance, les rapports d'intervention et le suivi des équipements.",
+      technologies: ['Laravel', 'MySQL', 'JavaScript', 'Bootstrap', 'PhpMyAdmin'],
     },
     {
-      title: 'Portfolio - 2024',
-      description: 'Conception et développement de mon portfolio personnel présentant mon parcours, mes compétences et mes projets avec une interface moderne et interactive.',
-      technologies: ['React', 'Next.js', 'Tailwind', 'Git'],
-    },
-    {
-      title: 'MAINTENANCE - 2022/2023',
-      description: 'Développement d\'une application métier pour gérer les tâches de maintenance, les rapports d\'intervention et le suivi des équipements pour une entreprise industrielle.',
-      technologies: ['Laravel', 'HTML/CSS', 'JS', 'MySQL', 'PHP'],
+      title: 'Banque Socredo — Portail métier',
+      description:
+        "Stage : développement et maintenance d'un portail applicatif métier pour le secteur bancaire, en collaboration avec les équipes métier.",
+      technologies: ['Symfony', 'MySQL', 'Tailwind CSS', 'JavaScript', 'PHP'],
     },
   ];
 
@@ -62,18 +86,18 @@ const Projects = () => {
         </motion.div>
 
         <div className="space-y-24 mb-20">
-          {projects.filter(p => p.featured).map((project, i) => (
-            <ProjectCard key={i} {...project} />
+          {projects.filter(p => p.featured).map((project) => (
+            <ProjectCard key={project.title} {...project} />
           ))}
         </div>
 
         <h3 className="text-2xl font-bold text-white text-center mb-12">
-          Autres projets intéressants{" "}
+          Autres projets intéressants
         </h3>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {projects.filter(p => !p.featured).map((project, i) => (
-            <ProjectCard key={i} {...project} />
+          {projects.filter(p => !p.featured).map((project) => (
+            <ProjectCard key={project.title} {...project} />
           ))}
           <motion.div 
             className="flex justify-center items-center"
@@ -83,7 +107,7 @@ const Projects = () => {
             viewport={{ once: true }}
           >
             <Button
-              onClick={() => window.open('https://github.com/CHANG-Toma', '_blank', 'noopener,noreferrer')}
+              onClick={() => window.open('https://github.com/CHANG-Toma?tab=repositories', '_blank', 'noopener,noreferrer')}
               className="group transition-all duration-300 hover:scale-105"
               variant="outline"
             >

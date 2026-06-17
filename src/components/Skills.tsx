@@ -30,13 +30,14 @@ const Skills = () => {
   const databases = [
     { name: "MySQL", icon: <Layout /> },
     { name: "PostgreSQL", icon: <Layout /> },
-    { name: "MongoDB", icon: <Layout /> },
   ];
 
   const otherSkills = [
     { name: "Git", icon: <GitBranch /> },
     { name: "Docker", icon: <Terminal /> },
-    { name: "CI/CD", icon: <Layout /> },
+    { name: "Linux", icon: <Terminal /> },
+    { name: "Vercel", icon: <Laptop /> },
+    { name: "Scrum / Kanban", icon: <Layout /> },
   ];
 
   return (

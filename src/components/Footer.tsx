@@ -3,6 +3,8 @@ import React from 'react';
 import { Github, Linkedin, Mail, Heart } from 'lucide-react';
 
 const Footer = () => {
+  const year = new Date().getFullYear();
+
   return (
     <footer className="py-8 px-6 bg-lightNavy/30 backdrop-blur-md">
       <div className="max-w-7xl mx-auto flex flex-col items-center">
@@ -32,12 +34,21 @@ const Footer = () => {
           >
             <Linkedin className="w-5 h-5" />
           </a>
+          <a
+            href="https://canva.link/iguu1b4afrg4oy0"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-lightSlate hover:text-purple transition-colors duration-300 text-sm"
+            aria-label="CV"
+          >
+            CV
+          </a>
         </div>
         
         <p className="text-lightSlate text-sm flex items-center">
           <span>Conçu et développé par Toma Chang</span>
           <Heart className="w-4 h-4 text-purple mx-2 animate-pulse " />
-          <span>2025</span>
+          <span>{year}</span>
         </p>
       </div>
     </footer>

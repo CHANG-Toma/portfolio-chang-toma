@@ -17,7 +17,7 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Toma Chang - Développeur Full-Stack",
   description:
-    "Bienvenue sur mon portfolio, je suis un développeur full-stack spécialisé dans la création d'applications web modernes et performantes.",
+    "Toma Chang — Développeur Full-Stack en alternance (Ensitech). Disponible en freelance et alternance. Portfolio, projets et contact.",
   authors: [{ name: "Toma Chang", url: "https://github.com/CHANG-Toma" }],
   keywords: [
     "Développeur Full-Stack",

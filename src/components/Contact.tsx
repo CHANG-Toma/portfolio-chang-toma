@@ -2,7 +2,7 @@
 import React, { useRef } from 'react';
 import { motion, useInView } from 'framer-motion';
 import { 
-  Phone, Mail, Linkedin, MapPin
+  Phone, Mail, Linkedin, MapPin, Car
 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
@@ -31,6 +31,10 @@ const Contact = () => {
       text: 'Île-de-France, 78180',
       href: 'https://maps.google.com/?q=78180,France'
     },
+    {
+      icon: <Car className="w-5 h-5 text-purple" />,
+      text: 'Permis B et véhiculé',
+    },
   ];
 
   return (
@@ -58,7 +62,8 @@ const Contact = () => {
           >
             <h3 className="text-2xl font-bold text-white mb-6">Discutons de votre projet</h3>
             <p className="text-lightSlate mb-8">
-              Je suis actuellement disponible pour des missions freelance. N&apos;hésitez pas à me contacter !
+              Je suis disponible en freelance et en alternance pour ma dernière année de Master
+              (Lead Développeur Full-Stack — Ensitech). N&apos;hésitez pas à me contacter !
             </p>
             
             <ul className="space-y-4">
@@ -70,19 +75,28 @@ const Contact = () => {
                   transition={{ duration: 0.3, delay: index * 0.1 }}
                   viewport={{ once: true }}
                 >
-                  <a 
-                    href={info.href}
-                    className="flex items-center group"
-                    target={info.href.startsWith('http') ? '_blank' : undefined}
-                    rel={info.href.startsWith('http') ? 'noopener noreferrer' : undefined}
-                  >
-                    <div className="mr-3 glassmorphism p-3 rounded-full">
-                      {info.icon}
+                  {info.href ? (
+                    <a 
+                      href={info.href}
+                      className="flex items-center group"
+                      target={info.href.startsWith('http') ? '_blank' : undefined}
+                      rel={info.href.startsWith('http') ? 'noopener noreferrer' : undefined}
+                    >
+                      <div className="mr-3 glassmorphism p-3 rounded-full">
+                        {info.icon}
+                      </div>
+                      <span className="text-lightSlate group-hover:text-purple transition-colors duration-300">
+                        {info.text}
+                      </span>
+                    </a>
+                  ) : (
+                    <div className="flex items-center">
+                      <div className="mr-3 glassmorphism p-3 rounded-full">
+                        {info.icon}
+                      </div>
+                      <span className="text-lightSlate">{info.text}</span>
                     </div>
-                    <span className="text-lightSlate group-hover:text-purple transition-colors duration-300">
-                      {info.text}
-                    </span>
-                  </a>
+                  )}
                 </motion.li>
               ))}
             </ul>
