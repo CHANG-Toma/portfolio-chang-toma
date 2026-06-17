@@ -10,6 +10,8 @@ import {
   Terminal,
   GitBranch,
   Layout,
+  Server,
+  PenTool,
 } from "lucide-react";
 
 const Skills = () => {
@@ -37,6 +39,10 @@ const Skills = () => {
     { name: "Docker", icon: <Terminal /> },
     { name: "Linux", icon: <Terminal /> },
     { name: "Vercel", icon: <Laptop /> },
+    { name: "o2switch", icon: <Server /> },
+    { name: "Merise", icon: <Layout /> },
+    { name: "UML", icon: <Layout /> },
+    { name: "Figma", icon: <PenTool /> },
     { name: "Scrum / Kanban", icon: <Layout /> },
   ];
 
