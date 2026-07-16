@@ -126,36 +126,68 @@ const BusinessHero = () => {
         <div className="flex justify-center md:justify-end">
           <motion.div
             className="relative"
-            initial={{ opacity: 0, scale: 0.92 }}
-            animate={{ opacity: 1, scale: 1, y: [0, -8, 0] }}
+            initial={{ opacity: 0, scale: 0.88 }}
+            animate={{ opacity: 1, scale: 1, y: [0, -10, 0] }}
             transition={{
-              opacity: { duration: 0.55, delay: 0.15 },
-              scale: { duration: 0.55, delay: 0.15 },
-              y: { duration: 4, repeat: Infinity, ease: "easeInOut", delay: 0.5 },
+              opacity: { duration: 0.6, delay: 0.15 },
+              scale: { duration: 0.6, delay: 0.15, type: "spring", stiffness: 120 },
+              y: { duration: 4.5, repeat: Infinity, ease: "easeInOut", delay: 0.6 },
             }}
+            whileHover={{ scale: 1.04 }}
           >
-            {/* Anneau orbital */}
+            {/* Halo pulsant */}
             <motion.div
-              className="absolute -inset-3 rounded-full border border-cbtBorder"
+              className="absolute -inset-8 rounded-full bg-snow/10 blur-3xl"
+              animate={{ opacity: [0.2, 0.45, 0.2], scale: [0.92, 1.08, 0.92] }}
+              transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
+              aria-hidden
+            />
+
+            {/* Anneau conique moderne */}
+            <motion.div
+              className="absolute -inset-5 rounded-full"
+              style={{
+                background:
+                  "conic-gradient(from 0deg, transparent 0%, var(--cbt-snow) 8%, transparent 18%, transparent 55%, var(--cbt-snow) 62%, transparent 72%)",
+                opacity: 0.35,
+                maskImage: "radial-gradient(farthest-side, transparent calc(100% - 2px), #000 calc(100% - 1px))",
+                WebkitMaskImage:
+                  "radial-gradient(farthest-side, transparent calc(100% - 2px), #000 calc(100% - 1px))",
+              }}
               animate={{ rotate: 360 }}
-              transition={{ duration: 28, repeat: Infinity, ease: "linear" }}
+              transition={{ duration: 10, repeat: Infinity, ease: "linear" }}
+              aria-hidden
+            />
+
+            {/* Anneau pointillé inverse */}
+            <motion.div
+              className="absolute -inset-2 rounded-full border border-dashed border-cbtBorderStrong/60"
+              animate={{ rotate: -360 }}
+              transition={{ duration: 22, repeat: Infinity, ease: "linear" }}
+              aria-hidden
+            />
+
+            {/* Satellites */}
+            <motion.div
+              className="absolute -inset-7"
+              animate={{ rotate: 360 }}
+              transition={{ duration: 14, repeat: Infinity, ease: "linear" }}
               aria-hidden
             >
-              <span className="absolute left-1/2 top-0 h-1.5 w-1.5 -translate-x-1/2 rounded-full bg-snow/70" />
+              <span className="absolute left-1/2 top-0 h-2 w-2 -translate-x-1/2 rounded-full bg-snow shadow-[0_0_12px_var(--cbt-snow)]" />
+              <span className="absolute bottom-[18%] left-[8%] h-1.5 w-1.5 rounded-full bg-snow/70" />
             </motion.div>
             <motion.div
-              className="absolute -inset-6 rounded-full border border-cbtBorder"
+              className="absolute -inset-10"
               animate={{ rotate: -360 }}
-              transition={{ duration: 40, repeat: Infinity, ease: "linear" }}
+              transition={{ duration: 24, repeat: Infinity, ease: "linear" }}
               aria-hidden
-            />
-            <motion.div
-              className="absolute inset-2 rounded-full bg-cbtFill blur-2xl"
-              animate={{ opacity: [0.25, 0.5, 0.25], scale: [0.95, 1.05, 0.95] }}
-              transition={{ duration: 3.5, repeat: Infinity, ease: "easeInOut" }}
-              aria-hidden
-            />
-            <div className="relative h-52 w-52 overflow-hidden rounded-full border border-cbtBorder bg-surface md:h-64 md:w-64">
+            >
+              <span className="absolute right-[12%] top-[30%] h-1 w-1 rounded-full bg-mist" />
+            </motion.div>
+
+            {/* Conteneur logo + shimmer */}
+            <div className="relative h-52 w-52 overflow-hidden rounded-full border border-cbtBorder bg-surface shadow-[0_0_40px_-12px_var(--cbt-snow)] md:h-64 md:w-64">
               <Image
                 ref={imageRef}
                 src="/images/CodeByToma.png"
@@ -164,6 +196,13 @@ const BusinessHero = () => {
                 height={256}
                 priority
                 className="h-full w-full rounded-full object-cover"
+              />
+              <motion.div
+                className="pointer-events-none absolute inset-0 bg-gradient-to-r from-transparent via-snow/25 to-transparent"
+                initial={{ x: "-120%" }}
+                animate={{ x: ["-120%", "120%"] }}
+                transition={{ duration: 2.8, repeat: Infinity, repeatDelay: 3.5, ease: "easeInOut" }}
+                aria-hidden
               />
             </div>
           </motion.div>
