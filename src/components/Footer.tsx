@@ -1,5 +1,6 @@
 "use client";
 import React from 'react';
+import Link from 'next/link';
 import { Github, Linkedin, Mail, Heart } from 'lucide-react';
 
 const Footer = () => {
@@ -43,6 +44,12 @@ const Footer = () => {
           >
             CV
           </a>
+          <Link
+            href="/"
+            className="text-lightSlate hover:text-purple transition-colors duration-300 text-sm"
+          >
+            CodeByToma
+          </Link>
         </div>
         
         <p className="text-lightSlate text-sm flex items-center">

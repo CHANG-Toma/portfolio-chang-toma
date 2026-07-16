@@ -1,31 +1,29 @@
 "use client";
 
-import Navbar from '@/components/Navbar';
-import Hero from '@/components/Hero';
-import About from '@/components/About';
-import Experience from '@/components/Experience';
-import Projects from '@/components/Projects';
-import Skills from '@/components/Skills';
-import Contact from '@/components/Contact';
-import Footer from '@/components/Footer';
-import BackgroundAnimation from '@/components/BackgroundAnimation';
+import BusinessNav from "@/components/business/BusinessNav";
+import BusinessHero from "@/components/business/BusinessHero";
+import BusinessOffers from "@/components/business/BusinessOffers";
+import BusinessProcess from "@/components/business/BusinessProcess";
+import BusinessApproach from "@/components/business/BusinessApproach";
+import BusinessContact from "@/components/business/BusinessContact";
+import BusinessFooter from "@/components/business/BusinessFooter";
+import BusinessStickyCta from "@/components/business/BusinessStickyCta";
 
-const Index = () => {
+const HomePage = () => {
   return (
-    <div className="min-h-screen relative">
-      <BackgroundAnimation />
-      <Navbar />
-      <main className="relative z-[1]">
-        <Hero />
-        <About />
-        <Experience />
-        <Projects />
-        <Skills />
-        <Contact />
-        <Footer />
+    <div className="business-theme relative min-h-screen bg-ink text-mist">
+      <BusinessNav />
+      <main>
+        <BusinessHero />
+        <BusinessOffers />
+        <BusinessProcess />
+        <BusinessApproach />
+        <BusinessContact />
       </main>
+      <BusinessFooter />
+      <BusinessStickyCta />
     </div>
   );
 };
 
-export default Index;
+export default HomePage;

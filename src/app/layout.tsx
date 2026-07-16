@@ -1,41 +1,43 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Figtree } from "next/font/google";
 import "./globals.css";
-import { Analytics } from "@vercel/analytics/react"
-import { SpeedInsights } from "@vercel/speed-insights/next"
+import { Analytics } from "@vercel/analytics/react";
+import { SpeedInsights } from "@vercel/speed-insights/next";
+import ThemeProvider from "@/components/ThemeProvider";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const figtree = Figtree({
+  variable: "--font-body",
   subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
 });
 
 export const metadata: Metadata = {
-  title: "Toma Chang - Développeur Full-Stack",
+  title: {
+    default: "CodeByToma — Sites web & accompagnement pour indépendants & PME",
+    template: "%s | CodeByToma",
+  },
   description:
-    "Toma Chang — Développeur Full-Stack en alternance (Ensitech). Disponible en freelance et alternance. Portfolio, projets et contact.",
-  authors: [{ name: "Toma Chang", url: "https://github.com/CHANG-Toma" }],
+    "CodeByToma crée et maintient votre présence en ligne : sites vitrines, offres Business et solutions sur mesure. Partenaire digital des indépendants et PME.",
+  authors: [{ name: "Toma Chang", url: "https://www.codebytoma.dev" }],
   keywords: [
-    "Développeur Full-Stack",
     "CodeByToma",
-    "Portfolio",
-    "Projet",
-    "Contact",
-    "Développeur",
-    "Full-Stack",
-    "CHANG Toma",
-    "toma chang",
-    "toma",
-    "chang",
-    "toma chang portfolio",
-    "toma chang github",
-    "toma chang linkedin",
-    "toma chang instagram",
+    "création site web",
+    "auto-entreprise",
+    "site vitrine",
+    "indépendants",
+    "PME",
+    "développement web",
+    "Toma Chang",
   ],
+  openGraph: {
+    title: "CodeByToma — Sites web & accompagnement digital",
+    description:
+      "Votre présence en ligne, sans contrainte technique. Sites, maintenance et outils sur mesure.",
+    url: "https://www.codebytoma.dev",
+    siteName: "CodeByToma",
+    locale: "fr_FR",
+    type: "website",
+  },
 };
 
 export default function RootLayout({
@@ -44,13 +46,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="fr">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        <SpeedInsights />
-        {children}
-        <Analytics />
+    <html lang="fr" className="dark" suppressHydrationWarning>
+      <body className={`${figtree.variable} antialiased`}>
+        <ThemeProvider>
+          <SpeedInsights />
+          {children}
+          <Analytics />
+        </ThemeProvider>
       </body>
     </html>
   );

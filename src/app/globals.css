@@ -1,6 +1,3 @@
-
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Fira+Code:wght@300;400;500;600;700&display=swap');
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -36,6 +33,45 @@
     --ring: 270 84% 70%;
 
     --radius: 0.5rem;
+
+    /* CodeByToma — dark (défaut) */
+    --cbt-ink: #0b0f14;
+    --cbt-surface: #141a22;
+    --cbt-mist: #a8b2c1;
+    --cbt-snow: #f2f4f7;
+    --cbt-border: rgba(255, 255, 255, 0.1);
+    --cbt-border-strong: rgba(255, 255, 255, 0.28);
+    --cbt-fill: rgba(255, 255, 255, 0.08);
+    --cbt-glow: rgba(255, 255, 255, 0.07);
+    --cbt-paper: #f6f7f9;
+    --cbt-chalk: #ffffff;
+    --cbt-charcoal: #141414;
+    --cbt-mute: #6b7280;
+    --cbt-line: #e5e7eb;
+    --cbt-cobalt: #1b2a4a;
+    --cbt-cobalt-soft: #2a3f66;
+  }
+
+  .light {
+    --cbt-ink: #f3f4f6;
+    --cbt-surface: #ffffff;
+    --cbt-mist: #5c6570;
+    --cbt-snow: #141414;
+    --cbt-border: rgba(20, 20, 20, 0.1);
+    --cbt-border-strong: rgba(20, 20, 20, 0.25);
+    --cbt-fill: rgba(20, 20, 20, 0.06);
+    --cbt-glow: rgba(20, 20, 20, 0.05);
+  }
+
+  .dark {
+    --cbt-ink: #0b0f14;
+    --cbt-surface: #141a22;
+    --cbt-mist: #a8b2c1;
+    --cbt-snow: #f2f4f7;
+    --cbt-border: rgba(255, 255, 255, 0.1);
+    --cbt-border-strong: rgba(255, 255, 255, 0.28);
+    --cbt-fill: rgba(255, 255, 255, 0.08);
+    --cbt-glow: rgba(255, 255, 255, 0.07);
   }
 
   * {
@@ -48,12 +84,30 @@
   }
 
   body {
-    @apply bg-navy text-lightSlate font-sans;
+    @apply font-sans;
     margin: 0;
     padding: 0;
     overflow-x: hidden;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    background-color: var(--cbt-ink);
+    color: var(--cbt-mist);
+    transition: background-color 0.25s ease, color 0.25s ease;
+  }
+
+  .business-theme {
+    font-family: var(--font-body), system-ui, sans-serif;
+    color: var(--cbt-mist);
+    background-color: var(--cbt-ink);
+  }
+
+  .business-theme .font-display,
+  .font-display {
+    font-family: var(--font-body), system-ui, sans-serif;
+  }
+
+  .portfolio-theme {
+    @apply bg-navy text-lightSlate;
   }
 
   ::-webkit-scrollbar {
@@ -61,42 +115,54 @@
   }
 
   ::-webkit-scrollbar-track {
-    @apply bg-lightNavy;
+    background: var(--cbt-ink);
   }
 
   ::-webkit-scrollbar-thumb {
+    @apply rounded-full;
+    background: color-mix(in srgb, var(--cbt-mist) 45%, transparent);
+  }
+
+  .portfolio-theme ::-webkit-scrollbar-track {
+    @apply bg-lightNavy;
+  }
+
+  .portfolio-theme ::-webkit-scrollbar-thumb {
     @apply bg-purple rounded-full;
   }
 
   ::selection {
+    background: color-mix(in srgb, var(--cbt-snow) 20%, transparent);
+    color: var(--cbt-snow);
+  }
+
+  .portfolio-theme ::selection {
     @apply bg-purple/30 text-white;
   }
 
-  /* Glassmorphism utility class */
   .glassmorphism {
     @apply bg-lightNavy/30 backdrop-blur-xl border border-white/10;
   }
 
-  /* Animation classes */
   .appear {
     @apply opacity-0 translate-y-4 transition-all duration-500 ease-out;
   }
-  
+
   .appear.inview {
     @apply opacity-100 translate-y-0;
   }
 
-  /* Hover effect for cards */
   .card-hover {
     @apply transition-all duration-300 hover:shadow-xl hover:shadow-purple/10 hover:-translate-y-2;
   }
 
-  /* Shimmer effect for loaders and buttons */
   .shimmer {
-    background: linear-gradient(90deg, 
-      rgba(255,255,255,0) 0%, 
-      rgba(255,255,255,0.1) 50%, 
-      rgba(255,255,255,0) 100%);
+    background: linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0) 0%,
+      rgba(255, 255, 255, 0.1) 50%,
+      rgba(255, 255, 255, 0) 100%
+    );
     background-size: 200% 100%;
     animation: shimmer 2s infinite;
   }

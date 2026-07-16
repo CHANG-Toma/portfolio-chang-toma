@@ -29,17 +29,17 @@ const Projects = () => {
     {
       title: 'CodeByToma',
       description:
-        "Application web gérant mes services freelance : présentation de l'offre, gestion de projets et communication avec les clients.",
+        "Site de mon auto-entreprise : offres (Présence, Business, Sur Mesure), processus et prise de contact client.",
       technologies: ['React', 'Next.js', 'Tailwind CSS', 'Vercel'],
       demo: 'https://www.codebytoma.dev/',
     },
     {
-      title: 'Portfolio — CodeByToma',
+      title: 'Portfolio — Toma Chang',
       description:
         "Portfolio personnel présentant mon parcours, mes compétences et mes projets avec une interface moderne, animée et responsive.",
       technologies: ['Next.js', 'React', 'TypeScript', 'Tailwind CSS', 'shadcn/ui'],
       github: 'https://github.com/CHANG-Toma/portfolio-chang-toma',
-      demo: 'https://www.codebytoma.dev/',
+      demo: 'https://www.codebytoma.dev/portfolio',
     },
     {
       title: 'Ecoride',
