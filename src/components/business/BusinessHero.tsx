@@ -6,20 +6,20 @@ import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 
 const BusinessHero = () => {
-  const imageRef = useRef<HTMLImageElement>(null);
+  const logoGroupRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const onMove = (e: MouseEvent) => {
-      if (!imageRef.current) return;
+      if (!logoGroupRef.current) return;
       const rx = (e.clientY - window.innerHeight / 2) / 55;
       const ry = (window.innerWidth / 2 - e.clientX) / 55;
-      imageRef.current.style.transition = "transform 0.3s ease-out";
-      imageRef.current.style.transform = `perspective(900px) rotateX(${rx}deg) rotateY(${ry}deg)`;
+      logoGroupRef.current.style.transition = "transform 0.3s ease-out";
+      logoGroupRef.current.style.transform = `perspective(900px) rotateX(${rx}deg) rotateY(${ry}deg)`;
     };
     const onLeave = () => {
-      if (!imageRef.current) return;
-      imageRef.current.style.transition = "transform 0.5s ease-out";
-      imageRef.current.style.transform = "perspective(900px) rotateX(0) rotateY(0)";
+      if (!logoGroupRef.current) return;
+      logoGroupRef.current.style.transition = "transform 0.5s ease-out";
+      logoGroupRef.current.style.transform = "perspective(900px) rotateX(0deg) rotateY(0deg)";
     };
     window.addEventListener("mousemove", onMove);
     window.addEventListener("mouseleave", onLeave);
@@ -115,67 +115,73 @@ const BusinessHero = () => {
             }}
             whileHover={{ scale: 1.04 }}
           >
-            <motion.div
-              className="absolute -inset-8 rounded-full bg-snow/10 blur-3xl"
-              animate={{ opacity: [0.2, 0.45, 0.2], scale: [0.92, 1.08, 0.92] }}
-              transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-              aria-hidden
-            />
-            <motion.div
-              className="absolute -inset-5 rounded-full"
-              style={{
-                background:
-                  "conic-gradient(from 0deg, transparent 0%, var(--cbt-snow) 8%, transparent 18%, transparent 55%, var(--cbt-snow) 62%, transparent 72%)",
-                opacity: 0.35,
-                maskImage:
-                  "radial-gradient(farthest-side, transparent calc(100% - 2px), #000 calc(100% - 1px))",
-                WebkitMaskImage:
-                  "radial-gradient(farthest-side, transparent calc(100% - 2px), #000 calc(100% - 1px))",
-              }}
-              animate={{ rotate: 360 }}
-              transition={{ duration: 10, repeat: Infinity, ease: "linear" }}
-              aria-hidden
-            />
-            <motion.div
-              className="absolute -inset-2 rounded-full border border-dashed border-cbtBorderStrong/60"
-              animate={{ rotate: -360 }}
-              transition={{ duration: 22, repeat: Infinity, ease: "linear" }}
-              aria-hidden
-            />
-            <motion.div
-              className="absolute -inset-7"
-              animate={{ rotate: 360 }}
-              transition={{ duration: 14, repeat: Infinity, ease: "linear" }}
-              aria-hidden
+            {/* Halo + orbites + logo basculent ensemble avec la souris */}
+            <div
+              ref={logoGroupRef}
+              className="relative will-change-transform"
+              style={{ transformStyle: "preserve-3d" }}
             >
-              <span className="absolute left-1/2 top-0 h-2 w-2 -translate-x-1/2 rounded-full bg-snow shadow-[0_0_12px_var(--cbt-snow)]" />
-              <span className="absolute bottom-[18%] left-[8%] h-1.5 w-1.5 rounded-full bg-snow/70" />
-            </motion.div>
-            <motion.div
-              className="absolute -inset-10"
-              animate={{ rotate: -360 }}
-              transition={{ duration: 24, repeat: Infinity, ease: "linear" }}
-              aria-hidden
-            >
-              <span className="absolute right-[12%] top-[30%] h-1 w-1 rounded-full bg-mist" />
-            </motion.div>
-            <div className="relative h-52 w-52 overflow-hidden rounded-full border border-cbtBorder bg-surface shadow-[0_0_40px_-12px_var(--cbt-snow)] md:h-64 md:w-64">
-              <Image
-                ref={imageRef}
-                src="/images/CodeByToma.png"
-                alt="Logo CodeByToma"
-                width={256}
-                height={256}
-                priority
-                className="h-full w-full rounded-full object-cover"
-              />
               <motion.div
-                className="pointer-events-none absolute inset-0 bg-gradient-to-r from-transparent via-snow/25 to-transparent"
-                initial={{ x: "-120%" }}
-                animate={{ x: ["-120%", "120%"] }}
-                transition={{ duration: 2.8, repeat: Infinity, repeatDelay: 3.5, ease: "easeInOut" }}
+                className="absolute -inset-8 rounded-full bg-snow/10 blur-3xl"
+                animate={{ opacity: [0.2, 0.45, 0.2], scale: [0.92, 1.08, 0.92] }}
+                transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
                 aria-hidden
               />
+              <motion.div
+                className="absolute -inset-5 rounded-full"
+                style={{
+                  background:
+                    "conic-gradient(from 0deg, transparent 0%, var(--cbt-snow) 8%, transparent 18%, transparent 55%, var(--cbt-snow) 62%, transparent 72%)",
+                  opacity: 0.35,
+                  maskImage:
+                    "radial-gradient(farthest-side, transparent calc(100% - 2px), #000 calc(100% - 1px))",
+                  WebkitMaskImage:
+                    "radial-gradient(farthest-side, transparent calc(100% - 2px), #000 calc(100% - 1px))",
+                }}
+                animate={{ rotate: 360 }}
+                transition={{ duration: 10, repeat: Infinity, ease: "linear" }}
+                aria-hidden
+              />
+              <motion.div
+                className="absolute -inset-2 rounded-full border border-dashed border-cbtBorderStrong/60"
+                animate={{ rotate: -360 }}
+                transition={{ duration: 22, repeat: Infinity, ease: "linear" }}
+                aria-hidden
+              />
+              <motion.div
+                className="absolute -inset-7"
+                animate={{ rotate: 360 }}
+                transition={{ duration: 14, repeat: Infinity, ease: "linear" }}
+                aria-hidden
+              >
+                <span className="absolute left-1/2 top-0 h-2 w-2 -translate-x-1/2 rounded-full bg-snow shadow-[0_0_12px_var(--cbt-snow)]" />
+                <span className="absolute bottom-[18%] left-[8%] h-1.5 w-1.5 rounded-full bg-snow/70" />
+              </motion.div>
+              <motion.div
+                className="absolute -inset-10"
+                animate={{ rotate: -360 }}
+                transition={{ duration: 24, repeat: Infinity, ease: "linear" }}
+                aria-hidden
+              >
+                <span className="absolute right-[12%] top-[30%] h-1 w-1 rounded-full bg-mist" />
+              </motion.div>
+              <div className="relative h-52 w-52 overflow-hidden rounded-full border border-cbtBorder bg-surface shadow-[0_0_40px_-12px_var(--cbt-snow)] md:h-64 md:w-64">
+                <Image
+                  src="/images/CodeByToma.png"
+                  alt="Logo CodeByToma"
+                  width={256}
+                  height={256}
+                  priority
+                  className="h-full w-full rounded-full object-cover"
+                />
+                <motion.div
+                  className="pointer-events-none absolute inset-0 bg-gradient-to-r from-transparent via-snow/25 to-transparent"
+                  initial={{ x: "-120%" }}
+                  animate={{ x: ["-120%", "120%"] }}
+                  transition={{ duration: 2.8, repeat: Infinity, repeatDelay: 3.5, ease: "easeInOut" }}
+                  aria-hidden
+                />
+              </div>
             </div>
           </motion.div>
         </div>
