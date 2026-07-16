@@ -13,16 +13,16 @@ const figtree = Figtree({
 
 export const metadata: Metadata = {
   title: {
-    default: "CodeByToma — Sites web & accompagnement pour indépendants & PME",
+    default: "CodeByToma — Partenaire digital dès 49€/mois",
     template: "%s | CodeByToma",
   },
   description:
-    "CodeByToma crée et maintient votre présence en ligne : sites vitrines, offres Business et solutions sur mesure. Partenaire digital des indépendants et PME.",
+    "CodeByToma crée, héberge et accompagne votre site internet à partir de 49€/mois. Abonnement simple et transparent pour indépendants et PME.",
   authors: [{ name: "Toma Chang", url: "https://www.codebytoma.dev" }],
   keywords: [
     "CodeByToma",
     "création site web",
-    "auto-entreprise",
+    "abonnement site internet",
     "site vitrine",
     "indépendants",
     "PME",
@@ -30,9 +30,9 @@ export const metadata: Metadata = {
     "Toma Chang",
   ],
   openGraph: {
-    title: "CodeByToma — Sites web & accompagnement digital",
+    title: "CodeByToma — Partenaire digital dès 49€/mois",
     description:
-      "Votre présence en ligne, sans contrainte technique. Sites, maintenance et outils sur mesure.",
+      "Votre site internet créé, hébergé, sécurisé et accompagné. Devis gratuit.",
     url: "https://www.codebytoma.dev",
     siteName: "CodeByToma",
     locale: "fr_FR",

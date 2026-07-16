@@ -3,7 +3,6 @@
 import React, { useEffect, useState } from "react";
 import { Mail } from "lucide-react";
 
-/** CTA mobile sticky — réduit la friction sur petit écran */
 const BusinessStickyCta = () => {
   const [visible, setVisible] = useState(false);
 
@@ -30,11 +29,11 @@ const BusinessStickyCta = () => {
       }`}
     >
       <a
-        href="mailto:toma11chang@gmail.com?subject=CodeByToma%20—%20Demande%20d%27information"
+        href="mailto:toma11chang@gmail.com?subject=CodeByToma%20—%20Devis%20gratuit"
         className="flex w-full items-center justify-center gap-2 rounded-md bg-snow py-3 text-[13px] font-medium text-ink"
       >
         <Mail className="h-3.5 w-3.5" />
-        Écrire à CodeByToma
+        Obtenir mon devis gratuit
       </a>
     </div>
   );

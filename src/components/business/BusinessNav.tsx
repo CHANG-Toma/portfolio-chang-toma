@@ -10,7 +10,7 @@ import ThemeToggle from "./ThemeToggle";
 const navItems = [
   { name: "Offres", href: "#offres" },
   { name: "Méthode", href: "#processus" },
-  { name: "Approche", href: "#approche" },
+  { name: "FAQ", href: "#faq" },
   { name: "Contact", href: "#contact" },
 ];
 
