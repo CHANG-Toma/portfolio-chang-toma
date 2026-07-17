@@ -1,37 +1,28 @@
-"use client";
+import type { Metadata } from "next";
+import HomeClient from "@/components/business/HomeClient";
+import JsonLd from "@/components/seo/JsonLd";
+import { SITE_DESCRIPTION, SITE_NAME, SITE_URL } from "@/lib/seo";
 
-import BusinessNav from "@/components/business/BusinessNav";
-import BusinessHero from "@/components/business/BusinessHero";
-import BusinessBenefits from "@/components/business/BusinessBenefits";
-import BusinessOffers from "@/components/business/BusinessOffers";
-import BusinessProcess from "@/components/business/BusinessProcess";
-import BusinessSubscription from "@/components/business/BusinessSubscription";
-import BusinessApproach from "@/components/business/BusinessApproach";
-import BusinessFaq from "@/components/business/BusinessFaq";
-import BusinessContact from "@/components/business/BusinessContact";
-import BusinessFooter from "@/components/business/BusinessFooter";
-import BusinessStickyCta from "@/components/business/BusinessStickyCta";
-import BusinessMarquee from "@/components/business/BusinessMarquee";
-
-const HomePage = () => {
-  return (
-    <div className="business-theme relative min-h-screen bg-ink text-mist">
-      <BusinessNav />
-      <main>
-        <BusinessHero />
-        <BusinessMarquee />
-        <BusinessBenefits />
-        <BusinessProcess />
-        <BusinessOffers />
-        <BusinessSubscription />
-        <BusinessApproach />
-        <BusinessFaq />
-        <BusinessContact />
-      </main>
-      <BusinessFooter />
-      <BusinessStickyCta />
-    </div>
-  );
+export const metadata: Metadata = {
+  title: {
+    absolute: `${SITE_NAME} — Sites web Essentiel & Pro pour freelances et PME`,
+  },
+  description: SITE_DESCRIPTION,
+  alternates: {
+    canonical: SITE_URL,
+  },
+  openGraph: {
+    title: `${SITE_NAME} — Sites web Essentiel & Pro`,
+    description: SITE_DESCRIPTION,
+    url: SITE_URL,
+  },
 };
 
-export default HomePage;
+export default function HomePage() {
+  return (
+    <>
+      <JsonLd />
+      <HomeClient />
+    </>
+  );
+}

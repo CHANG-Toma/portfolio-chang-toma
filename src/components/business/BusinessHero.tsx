@@ -62,20 +62,24 @@ const BusinessHero = () => {
           />
 
           <div className="mt-4">
-            <BlurText
-              text="Une présence en ligne professionnelle,"
-              delay={50}
-              animateBy="words"
-              direction="top"
-              className="max-w-xl text-[2.35rem] font-semibold leading-[1.12] tracking-tight text-snow sm:text-5xl md:text-[3.1rem]"
-            />
-            <BlurText
-              text="qui grandit avec vous."
-              delay={70}
-              animateBy="words"
-              direction="top"
-              className="mt-1 max-w-xl text-[2.35rem] font-normal leading-[1.12] tracking-tight text-mist sm:text-5xl md:text-[3.1rem]"
-            />
+            <h1 className="max-w-xl">
+              <BlurText
+                as="span"
+                text="Une présence en ligne professionnelle,"
+                delay={50}
+                animateBy="words"
+                direction="top"
+                className="text-[2.35rem] font-semibold leading-[1.12] tracking-tight text-snow sm:text-5xl md:text-[3.1rem]"
+              />
+              <BlurText
+                as="span"
+                text="qui grandit avec vous."
+                delay={70}
+                animateBy="words"
+                direction="top"
+                className="mt-1 text-[2.35rem] font-normal leading-[1.12] tracking-tight text-mist sm:text-5xl md:text-[3.1rem]"
+              />
+            </h1>
           </div>
 
           <motion.p

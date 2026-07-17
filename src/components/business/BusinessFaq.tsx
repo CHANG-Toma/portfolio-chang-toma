@@ -30,18 +30,23 @@ const BusinessFaq = () => {
           </h2>
         </motion.div>
 
-        <div className="mt-12 max-w-3xl divide-y divide-[var(--cbt-border)] border-y border-cbtBorder">
+        <div className="mt-12 max-w-3xl divide-y divide-[var(--cbt-border)] border-y border-cbtBorder" itemScope itemType="https://schema.org/FAQPage">
           {offersFaq.map((item, i) => {
             const isOpen = open === i;
             return (
-              <div key={item.q}>
+              <div
+                key={item.q}
+                itemScope
+                itemProp="mainEntity"
+                itemType="https://schema.org/Question"
+              >
                 <button
                   type="button"
                   onClick={() => setOpen(isOpen ? null : i)}
                   className="flex w-full items-center justify-between gap-4 py-5 text-left"
                   aria-expanded={isOpen}
                 >
-                  <span className="text-[15px] font-medium text-snow">
+                  <span itemProp="name" className="text-[15px] font-medium text-snow">
                     {item.q}
                   </span>
                   <ChevronDown
@@ -59,13 +64,29 @@ const BusinessFaq = () => {
                       exit={{ height: 0, opacity: 0 }}
                       transition={{ duration: 0.22 }}
                       className="overflow-hidden"
+                      itemScope
+                      itemProp="acceptedAnswer"
+                      itemType="https://schema.org/Answer"
                     >
-                      <p className="pb-5 text-[14px] leading-relaxed text-mist">
+                      <p
+                        itemProp="text"
+                        className="pb-5 text-[14px] leading-relaxed text-mist"
+                      >
                         {item.a}
                       </p>
                     </motion.div>
                   )}
                 </AnimatePresence>
+                {!isOpen && (
+                  <div
+                    className="sr-only"
+                    itemScope
+                    itemProp="acceptedAnswer"
+                    itemType="https://schema.org/Answer"
+                  >
+                    <p itemProp="text">{item.a}</p>
+                  </div>
+                )}
               </div>
             );
           })}
