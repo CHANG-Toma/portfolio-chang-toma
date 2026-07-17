@@ -2,6 +2,7 @@ import { offersFaq } from "@/data/businessOffers";
 import {
   CONTACT,
   SITE_DESCRIPTION,
+  SITE_LOGO,
   SITE_NAME,
   SITE_NAME_ALIASES,
   SITE_TAGLINE,
@@ -17,9 +18,9 @@ const organization = {
   url: SITE_URL,
   logo: {
     "@type": "ImageObject",
-    url: `${SITE_URL}/images/CodeByToma.png`,
+    url: `${SITE_URL}${SITE_LOGO.url}`,
   },
-  image: `${SITE_URL}/images/CodeByToma.png`,
+  image: `${SITE_URL}${SITE_LOGO.url}`,
   email: CONTACT.email,
   telephone: CONTACT.phone,
   founder: {
@@ -27,7 +28,7 @@ const organization = {
     name: "Toma Chang",
     alternateName: ["Toma", "Code by Toma"],
     url: SITE_URL,
-    jobTitle: "Développeur Full-Stack",
+    jobTitle: "Développeur Informatique",
   },
   sameAs: [] as string[],
   areaServed: {
@@ -43,7 +44,7 @@ const professionalService = {
   alternateName: [...SITE_NAME_ALIASES],
   description: SITE_DESCRIPTION,
   url: SITE_URL,
-  image: `${SITE_URL}/images/CodeByToma.png`,
+  image: `${SITE_URL}${SITE_LOGO.url}`,
   telephone: CONTACT.phone,
   email: CONTACT.email,
   priceRange: "€€",
@@ -63,38 +64,38 @@ const professionalService = {
   offers: [
     {
       "@type": "Offer",
-      name: "Frais de mise en place",
-      price: "149",
+      name: "Frais de lancement",
+      price: "490",
       priceCurrency: "EUR",
       description:
-        "Création de votre site vitrine, quel que soit le palier d'abonnement choisi.",
+        "Conception, développement et mise en ligne de votre site, quel que soit l'abonnement choisi.",
       url: `${SITE_URL}/#offres`,
     },
     {
       "@type": "Offer",
       name: "Abonnement Essentiel",
-      price: "39",
+      price: "49",
       priceCurrency: "EUR",
       description:
-        "Hébergement, SSL, sauvegardes, monitoring et support e-mail.",
+        "Site en ligne et sécurisé : hébergement, domaine, SSL, sauvegardes, mises à jour et surveillance.",
       url: `${SITE_URL}/#offres`,
     },
     {
       "@type": "Offer",
       name: "Abonnement Sérénité",
-      price: "79",
+      price: "99",
       priceCurrency: "EUR",
       description:
-        "Tout Essentiel + 2 modifications de contenu / mois, SEO de base et support prioritaire.",
+        "On gère votre site pour vous : modifications mensuelles, performances, SEO de base et support prioritaire.",
       url: `${SITE_URL}/#offres`,
     },
     {
       "@type": "Offer",
-      name: "Abonnement Premium",
+      name: "Abonnement Croissance",
       price: "199",
       priceCurrency: "EUR",
       description:
-        "Tout Sérénité + point mensuel et jusqu'à 3h d'évolutions légères / mois.",
+        "Accompagnement pour faire évoluer le site : 2h d'évolutions / mois, conversion, audit SEO et conseils stratégiques.",
       url: `${SITE_URL}/#offres`,
     },
   ],

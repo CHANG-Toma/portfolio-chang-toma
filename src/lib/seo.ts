@@ -9,17 +9,25 @@ export const SITE_NAME_ALIASES = [
 ] as const;
 
 export const SITE_TAGLINE =
-  "Abonnement site web pour freelances & PME — dès 39 €/mois";
+  "Abonnement site web pour freelances & PME — dès 49 €/mois";
 
 /**
  * Description Google (~150–160 car. max).
- * Modèle : frais de mise en place + abonnement.
+ * Modèle : frais de lancement + abonnement.
  */
 export const SITE_DESCRIPTION =
-  "Code by Toma : site en ligne dès 149 € de mise en place, puis abonnement dès 39 €/mois. Devis gratuit.";
+  "Code by Toma : site en ligne dès 490 € de lancement, puis abonnement dès 49 €/mois. Devis gratuit.";
 
 export const SITE_TITLE_DEFAULT = "CodeByToma";
 export const SITE_TITLE_HOME = "CodeByToma";
+
+/** Logo marque (circulaire, noir sur blanc). */
+export const SITE_LOGO = {
+  url: "/images/logo-codebytoma.png",
+  alt: "Logo Code By Toma — Développeur Informatique",
+  width: 512,
+  height: 512,
+} as const;
 
 export const OG_IMAGE = {
   url: "/images/og-image.png",

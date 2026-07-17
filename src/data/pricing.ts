@@ -1,10 +1,16 @@
 export type PricingAbonnementCard = {
   id: string;
+  emoji: string;
   title: string;
   tagline: string;
   price: string;
   period: string;
+  /** Lignes avec coche (features) */
   features: string[];
+  /** Préfixe type « Tout Essentiel » affiché avant les features */
+  includesFrom?: string;
+  /** Ligne grisée hors forfait */
+  footnote?: string;
   cta: string;
   ctaSubject: string;
   featured?: boolean;
@@ -13,51 +19,61 @@ export type PricingAbonnementCard = {
 
 /** Frais de mise en place uniques — affichés une seule fois au-dessus des cartes. */
 export const setupFee = {
-  amount: 149,
-  label: "Frais de mise en place : 149€",
+  amount: 490,
+  label: "Frais de lancement : 490€",
   detail:
-    "création de votre site, quel que soit le palier choisi",
+    "Ils couvrent la conception, le développement et la mise en ligne de votre site.",
+  note: "Quel que soit l'abonnement choisi.",
 };
 
 export const subscriptionSection = {
   label: "Abonnement",
-  heading: "Un abonnement tout compris",
+  heading: "Votre site, toujours performant",
   description:
-    "Un abonnement tout compris pour être visible en ligne, sans gros investissement de départ. Votre abonnement évolue avec vos besoins.",
+    "Choisissez le niveau d'accompagnement qui correspond à vos besoins. Nous nous occupons de toute la partie technique afin que vous puissiez vous concentrer sur votre activité.",
   commitment:
     "Engagement 12 mois, reconduction tacite ensuite. Le site reste hébergé et géré par nos soins pendant toute la durée de l'abonnement.",
   evolutionNote:
-    "Évolution légère = ajout de contenu/section/formulaire simple. Toute nouvelle fonctionnalité complexe (espace client, réservation, paiement…) est étudiée en projet sur-mesure séparé.",
+    "Évolution = ajout de contenu, section ou optimisation. Toute nouvelle fonctionnalité complexe (espace client, réservation, paiement…) est étudiée en projet sur-mesure séparé.",
 };
 
 export const pricingAbonnement: PricingAbonnementCard[] = [
   {
     id: "essentiel",
+    emoji: "🌱",
     title: "Essentiel",
-    tagline: "Le site tourne — vous ne touchez à rien de technique.",
-    price: "39 €",
+    tagline:
+      "Idéal pour les entreprises qui souhaitent simplement que leur site reste en ligne et sécurisé.",
+    price: "49€",
     period: "/mois",
     features: [
-      "Hébergement sécurisé + nom de domaine",
-      "SSL, sauvegardes & mises à jour techniques",
-      "Monitoring de disponibilité",
-      "Support e-mail (réponse sous 48h)",
-      "Modifications de contenu : hors forfait (sur devis)",
+      "Hébergement sécurisé",
+      "Nom de domaine",
+      "Certificat SSL",
+      "Sauvegardes automatiques",
+      "Mises à jour techniques",
+      "Surveillance du site",
+      "Support par email (48h)",
     ],
+    footnote: "Modifications de contenu disponibles sur devis.",
     cta: "Choisir Essentiel",
     ctaSubject: "CodeByToma — Abonnement Essentiel",
   },
   {
     id: "serenite",
+    emoji: "🚀",
     title: "Sérénité",
-    tagline: "Le site reste à jour — sans que vous ayez à le gérer.",
-    price: "79 €",
+    tagline: "Vous ne vous occupez de rien, nous gérons votre site pour vous.",
+    price: "99€",
     period: "/mois",
+    includesFrom: "Tout Essentiel",
     features: [
-      "Tout Essentiel",
-      "2 modifications de contenu incluses / mois (textes, images, pages simples — hors refonte)",
-      "Optimisation performance & SEO de base",
-      "Support prioritaire (réponse sous 24h)",
+      "30 minutes de modifications chaque mois (textes, images, horaires…)",
+      "Optimisation des performances",
+      "Vérification SEO de base",
+      "Rapport mensuel de maintenance",
+      "Assistance prioritaire",
+      "Réponse sous 24h",
     ],
     cta: "Choisir Sérénité",
     ctaSubject: "CodeByToma — Abonnement Sérénité",
@@ -65,19 +81,124 @@ export const pricingAbonnement: PricingAbonnementCard[] = [
     badge: "Le plus choisi",
   },
   {
-    id: "premium",
-    title: "Premium",
-    tagline: "Le site progresse avec votre activité.",
-    price: "199 €",
+    id: "croissance",
+    emoji: "⭐",
+    title: "Croissance",
+    tagline:
+      "Pour les entreprises qui souhaitent faire évoluer leur site régulièrement.",
+    price: "199€",
     period: "/mois",
+    includesFrom: "Tout Sérénité",
     features: [
-      "Tout Sérénité",
-      "Point mensuel 15 min (objectifs & priorités)",
-      "Jusqu'à 3h d'évolutions légères / mois (ajout de section, formulaire simple, petite intégration)",
-      "Priorité sur les projets sur-mesure (réservation, espace client…)",
+      "2 heures d'évolutions chaque mois",
+      "Création de nouvelles sections",
+      "Optimisation de la conversion",
+      "Audit SEO mensuel",
+      "Conseils stratégiques",
+      "Priorité absolue sur les demandes",
+      "Réponse prioritaire",
     ],
-    cta: "Choisir Premium",
-    ctaSubject: "CodeByToma — Abonnement Premium",
+    cta: "Choisir Croissance",
+    ctaSubject: "CodeByToma — Abonnement Croissance",
+  },
+];
+
+export type ComparisonValue = boolean | string;
+
+export type ComparisonRow = {
+  feature: string;
+  essentiel: ComparisonValue;
+  serenite: ComparisonValue;
+  croissance: ComparisonValue;
+};
+
+export const comparisonTable: ComparisonRow[] = [
+  { feature: "Hébergement", essentiel: true, serenite: true, croissance: true },
+  {
+    feature: "Nom de domaine",
+    essentiel: true,
+    serenite: true,
+    croissance: true,
+  },
+  { feature: "SSL", essentiel: true, serenite: true, croissance: true },
+  {
+    feature: "Sauvegardes",
+    essentiel: true,
+    serenite: true,
+    croissance: true,
+  },
+  {
+    feature: "Mises à jour",
+    essentiel: true,
+    serenite: true,
+    croissance: true,
+  },
+  {
+    feature: "Monitoring",
+    essentiel: true,
+    serenite: true,
+    croissance: true,
+  },
+  {
+    feature: "Temps de réponse",
+    essentiel: "48h",
+    serenite: "24h",
+    croissance: "Prioritaire",
+  },
+  {
+    feature: "Temps de modifications inclus",
+    essentiel: "Sur devis",
+    serenite: "30 min / mois",
+    croissance: "2 h / mois",
+  },
+  {
+    feature: "Optimisation performances",
+    essentiel: false,
+    serenite: true,
+    croissance: true,
+  },
+  {
+    feature: "SEO",
+    essentiel: false,
+    serenite: "De base",
+    croissance: "Audit mensuel",
+  },
+  {
+    feature: "Rapport mensuel",
+    essentiel: false,
+    serenite: true,
+    croissance: true,
+  },
+  {
+    feature: "Conseils",
+    essentiel: false,
+    serenite: false,
+    croissance: "Stratégiques",
+  },
+  {
+    feature: "Priorité support",
+    essentiel: false,
+    serenite: true,
+    croissance: "Absolue",
+  },
+];
+
+export const subscriptionFaq = [
+  {
+    q: "Puis-je changer d'abonnement ?",
+    a: "Oui. Vous pouvez passer d'Essentiel à Sérénité ou Croissance (et inversement) selon l'évolution de vos besoins. On ajuste simplement le niveau d'accompagnement — sans tout recommencer.",
+  },
+  {
+    q: "Puis-je résilier ?",
+    a: "L'abonnement est souscrit pour 12 mois, puis reconduit tacitement. Vous pouvez le résilier selon les modalités précisées dans le contrat. Pendant toute la durée, votre site reste hébergé et géré par nos soins.",
+  },
+  {
+    q: "Que se passe-t-il si j'ai besoin d'une grosse évolution ?",
+    a: "Les évolutions importantes (espace client, réservation, paiement, e-commerce…) sont étudiées en projet sur-mesure, séparément de l'abonnement. On définit ensemble le périmètre et un devis dédié.",
+  },
+  {
+    q: "Le nom de domaine est-il inclus ?",
+    a: "Oui. Le nom de domaine est inclus dans les trois formules, avec l'hébergement sécurisé et le certificat SSL.",
   },
 ];
 

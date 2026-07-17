@@ -5,10 +5,10 @@ import { motion } from "framer-motion";
 import { Check } from "lucide-react";
 
 const points = [
-  "149 € de mise en place — une seule fois",
-  "Essentiel : technique & sécurité uniquement",
-  "Sérénité : contenu inclus + support prioritaire",
-  "Premium : point mensuel + évolutions légères",
+  "490 € de frais de lancement — une seule fois",
+  "Essentiel : site en ligne et sécurisé",
+  "Sérénité : on gère le site pour vous",
+  "Croissance : évoluer le site toute l’année",
   "Passage d’une formule à l’autre possible",
   "Engagement 12 mois, reconduction tacite",
 ];
@@ -31,14 +31,14 @@ const BusinessSubscription = () => {
               Pourquoi choisir un abonnement&nbsp;?
             </h2>
             <p className="mt-4 text-[15px] leading-relaxed text-mist md:text-base">
-              Chaque formule a un rôle clair : garder le site en ligne, le tenir
-              à jour pour vous, ou le faire évoluer mois après mois — après une
-              mise en place à 149 €.
+              Chaque formule a un rôle clair : garder le site en ligne, le gérer
+              pour vous, ou le faire évoluer mois après mois — après des frais de
+              lancement de 490 €.
             </p>
             <p className="mt-6 text-[15px] font-medium text-snow">
               Commencez simple, montez en gamme plus tard.
               <span className="mt-1 block font-normal text-mist">
-                Le Premium prépare aussi le passage vers du sur-mesure
+                Croissance prépare aussi le passage vers du sur-mesure
                 (réservation, espace client…) sans tout recommencer.
               </span>
             </p>

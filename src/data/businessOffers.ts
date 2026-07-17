@@ -28,9 +28,9 @@ export const showcaseProjects: ShowcaseProject[] = [
     type: "Site vitrine",
     style: "Essentiel",
     url: "/demo/vitrine",
-    image: "/images/showcase/aria-coach.jpg",
-    previewFrom: "from-orange-400",
-    previewTo: "to-indigo-500",
+    image: "/images/showcase/aria-coach-studio.jpg",
+    previewFrom: "from-stone-700",
+    previewTo: "to-emerald-950",
     live: true,
   },
   {
@@ -49,30 +49,34 @@ export const showcaseProjects: ShowcaseProject[] = [
 export const offersFaq = [
   {
     q: "Quel est le délai de création d'un site ?",
-    a: "En moyenne entre une et trois semaines selon la complexité et la disponibilité de vos contenus. Les frais de mise en place (149 €) couvrent la création initiale. Nous vous communiquons un planning précis dès le démarrage.",
+    a: "En moyenne entre une et trois semaines selon la complexité et la disponibilité de vos contenus. Les frais de lancement (490 €) couvrent la conception, le développement et la mise en ligne. Nous vous communiquons un planning précis dès le démarrage.",
   },
   {
     q: "Comment fonctionne la tarification ?",
-    a: "Vous payez 149 € de frais de mise en place (création du site), puis un abonnement mensuel (Essentiel 39 €, Sérénité 79 € ou Premium 199 €) qui couvre hébergement, sécurité et accompagnement. Pas de gros investissement de départ.",
+    a: "Vous payez 490 € de frais de lancement (création du site), puis un abonnement mensuel selon le niveau d'accompagnement : Essentiel 49 €, Sérénité 99 € ou Croissance 199 €. Hébergement, sécurité et suivi sont inclus.",
   },
   {
-    q: "Quelle est la différence entre Essentiel, Sérénité et Premium ?",
-    a: "Essentiel : technique seule (hébergement, SSL, sauvegardes, monitoring). Sérénité : + 2 modifications de contenu / mois, perf/SEO de base et support prioritaire. Premium : + point mensuel 15 min et jusqu’à 3h d’évolutions légères / mois.",
+    q: "Quelle est la différence entre Essentiel, Sérénité et Croissance ?",
+    a: "Essentiel : votre site reste en ligne et sécurisé. Sérénité : on gère le site pour vous (modifications mensuelles, perf/SEO, rapport). Croissance : accompagnement pour faire évoluer le site régulièrement (évolutions, conversion, conseils stratégiques).",
+  },
+  {
+    q: "Puis-je changer d'abonnement ?",
+    a: "Oui. Vous pouvez passer d'Essentiel à Sérénité ou Croissance (et inversement) selon l'évolution de vos besoins, sans tout recommencer.",
+  },
+  {
+    q: "Puis-je résilier ?",
+    a: "L'abonnement est souscrit pour 12 mois, puis reconduit tacitement. Vous pouvez le résilier selon les modalités précisées dans le contrat. Pendant toute la durée, votre site reste hébergé et géré par nos soins.",
+  },
+  {
+    q: "Que se passe-t-il si j'ai besoin d'une grosse évolution ?",
+    a: "Les évolutions importantes (espace client, réservation, paiement, e-commerce…) sont étudiées en projet sur-mesure, séparément de l'abonnement. On définit ensemble le périmètre et un devis dédié.",
+  },
+  {
+    q: "Le nom de domaine est-il inclus ?",
+    a: "Oui. Le nom de domaine est inclus dans les trois formules, avec l'hébergement sécurisé et le certificat SSL.",
   },
   {
     q: "Proposez-vous des applications web ou de l'e-commerce ?",
     a: "Oui. Les projets plus complexes (applications, e-commerce, réservation, espace client, paiement…) sont étudiés en sur-mesure, séparément de l’abonnement. Contactez-moi pour en discuter — sans grille de prix figée.",
-  },
-  {
-    q: "Que signifie « évolution légère » ?",
-    a: "Ajout de contenu, section ou formulaire simple. Toute nouvelle fonctionnalité complexe (espace client, réservation, paiement…) est étudiée en projet sur-mesure séparé.",
-  },
-  {
-    q: "Puis-je faire évoluer mon abonnement plus tard ?",
-    a: "Absolument. Vous pouvez monter de palier (Essentiel → Sérénité → Premium) ou passer sur du sur-mesure quand votre activité le demande, sans tout recommencer.",
-  },
-  {
-    q: "Quel est l'engagement de l'abonnement ?",
-    a: "L'abonnement est souscrit pour une durée initiale de 12 mois, puis reconduit tacitement. Pendant toute la durée, le site reste hébergé et géré par nos soins. Vous pouvez l'ajuster ou le résilier selon les modalités précisées dans le contrat.",
   },
 ];

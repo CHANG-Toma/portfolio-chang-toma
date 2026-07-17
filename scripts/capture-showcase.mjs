@@ -9,7 +9,7 @@ const OUT = path.join(__dirname, "../public/images/showcase");
 
 const demos = [
   { slug: "maison-lune", url: "/demo/gastro" },
-  { slug: "aria-coach", url: "/demo/vitrine" },
+  { slug: "aria-coach-studio", url: "/demo/vitrine" },
   { slug: "atelier-seve", url: "/demo/coiffure" },
 ];
 

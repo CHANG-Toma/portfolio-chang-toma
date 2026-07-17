@@ -188,14 +188,14 @@ const BusinessHero = () => {
               >
                 <span className="absolute right-[12%] top-[30%] h-1 w-1 rounded-full bg-mist" />
               </motion.div>
-              <div className="relative h-52 w-52 overflow-hidden rounded-full border border-cbtBorder bg-surface shadow-[0_0_40px_-12px_var(--cbt-snow)] md:h-64 md:w-64">
+              <div className="relative h-52 w-52 overflow-hidden rounded-full border border-cbtBorder bg-snow shadow-[0_0_40px_-12px_var(--cbt-snow)] md:h-64 md:w-64">
                 <Image
-                  src="/images/CodeByToma.png"
-                  alt="Logo CodeByToma — Code by Toma, développeur Full-Stack"
-                  width={256}
-                  height={256}
+                  src="/images/logo-codebytoma.png"
+                  alt="Logo Code By Toma — Développeur Informatique"
+                  fill
+                  sizes="(max-width: 768px) 208px, 256px"
                   priority
-                  className="h-full w-full rounded-full object-cover"
+                  className="scale-[1.38] rounded-full object-cover object-center"
                 />
                 <motion.div
                   className="pointer-events-none absolute inset-0 bg-gradient-to-r from-transparent via-snow/25 to-transparent"

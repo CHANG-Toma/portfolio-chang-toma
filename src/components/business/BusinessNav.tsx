@@ -1,14 +1,16 @@
 "use client";
 
 import React, { useEffect, useState } from "react";
+import Image from "next/image";
 import { Menu, X } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { createPortal } from "react-dom";
 import ThemeToggle from "./ThemeToggle";
+import { SITE_LOGO } from "@/lib/seo";
 
 const navItems = [
-  { name: "Offres", href: "#offres" },
   { name: "Méthode", href: "#processus" },
+  { name: "Offres", href: "#offres" },
   { name: "FAQ", href: "#faq" },
   { name: "Contact", href: "#contact" },
 ];
@@ -92,8 +94,21 @@ const BusinessNav = () => {
       )}
     >
       <div className="mx-auto flex max-w-6xl items-center justify-between">
-        <a href="#accueil" className="text-sm font-semibold tracking-[0.02em] text-snow">
-          CodeByToma
+        <a
+          href="#accueil"
+          className="inline-flex items-center gap-2.5 text-sm font-semibold tracking-[0.02em] text-snow"
+        >
+          <span className="relative h-8 w-8 shrink-0 overflow-hidden rounded-full bg-snow">
+            <Image
+              src={SITE_LOGO.url}
+              alt=""
+              fill
+              sizes="32px"
+              className="scale-[1.38] rounded-full object-cover object-center"
+              priority
+            />
+          </span>
+          <span className="hidden sm:inline">CodeByToma</span>
         </a>
         <nav className="hidden items-center gap-1 md:flex">
           {navItems.map((item) => {

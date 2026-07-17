@@ -5,8 +5,8 @@ import { motion } from "framer-motion";
 import { Check } from "lucide-react";
 
 const benefits = [
-  "Mise en place dès 149 €",
-  "Abonnement dès 39 €/mois",
+  "Frais de lancement 490 €",
+  "Abonnement dès 49 €/mois",
   "Hébergement & maintenance inclus",
   "Design personnalisé",
   "Un développeur Full-Stack dédié",
@@ -33,9 +33,9 @@ const BusinessBenefits = () => {
           </h2>
           <p className="mt-4 text-[15px] leading-relaxed text-mist md:text-base">
             Sans présence en ligne pro, freelances et PME perdent en
-            crédibilité. Nous créons votre site avec de petits frais de mise en
-            place, puis nous l&apos;accompagnons dans la durée — avec un
-            abonnement qui évolue si votre activité grandit.
+            crédibilité. Nous créons votre site, puis nous l&apos;accompagnons
+            dans la durée — avec un abonnement adapté à vos besoins, qui évolue
+            si votre activité grandit.
           </p>
         </motion.div>
 

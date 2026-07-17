@@ -102,79 +102,13 @@ export default {
 				sm: 'calc(var(--radius) - 4px)'
 			},
 			keyframes: {
-				'accordion-down': {
-					from: { height: '0' },
-					to: { height: 'var(--radix-accordion-content-height)' }
-				},
-				'accordion-up': {
-					from: { height: 'var(--radix-accordion-content-height)' },
-					to: { height: '0' }
-				},
-				float: {
-					'0%, 100%': { transform: 'translateY(0)' },
-					'50%': { transform: 'translateY(-10px)' }
-				},
-				fadeIn: {
-					'0%': { opacity: '0', transform: 'translateY(10px)' },
-					'100%': { opacity: '1', transform: 'translateY(0)' }
-				},
-				fadeInLeft: {
-					'0%': { opacity: '0', transform: 'translateX(-20px)' },
-					'100%': { opacity: '1', transform: 'translateX(0)' }
-				},
-				fadeInRight: {
-					'0%': { opacity: '0', transform: 'translateX(20px)' },
-					'100%': { opacity: '1', transform: 'translateX(0)' }
-				},
-				scale: {
-					'0%': { transform: 'scale(0.95)' },
-					'100%': { transform: 'scale(1)' }
-				},
-				'spin-slow': {
-					'0%': { transform: 'rotate(0deg)' },
-					'100%': { transform: 'rotate(360deg)' }
-				},
-				'radar-beam': {
-					'0%': { transform: 'rotate(0deg)', opacity: '0' },
-					'50%': { opacity: '0.5' },
-					'100%': { transform: 'rotate(360deg)', opacity: '0' }
-				},
-				pulse: {
-					'0%, 100%': { opacity: '1' },
-					'50%': { opacity: '0.5' }
-				},
-				shimmer: {
-					'0%': { backgroundPosition: '-200% 0' },
-					'100%': { backgroundPosition: '200% 0' }
-				},
-				'star-movement-bottom': {
-					'0%': { transform: 'translate(0%, 0%)', opacity: '1' },
-					'100%': { transform: 'translate(-100%, 0%)', opacity: '0' },
-				},
-				'star-movement-top': {
-					'0%': { transform: 'translate(0%, 0%)', opacity: '1' },
-					'100%': { transform: 'translate(100%, 0%)', opacity: '0' },
-				},
 				'cbt-marquee': {
 					from: { transform: 'translateX(0)' },
 					to: { transform: 'translateX(-50%)' },
 				},
 			},
 			animation: {
-				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out',
-				'float': 'float 6s ease-in-out infinite',
-				'fade-in': 'fadeIn 0.6s ease-out',
-				'fade-in-left': 'fadeInLeft 0.6s ease-out',
-				'fade-in-right': 'fadeInRight 0.6s ease-out',
-				'scale': 'scale 0.4s ease-out',
-				'spin-slow': 'spin-slow 15s linear infinite',
-				'radar-beam': 'radar-beam 4s linear infinite',
-				'pulse': 'pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite',
-				'shimmer': 'shimmer 2s linear infinite',
-				'star-movement-bottom': 'star-movement-bottom linear infinite alternate',
-				'star-movement-top': 'star-movement-top linear infinite alternate',
-				'cbt-marquee': 'cbt-marquee 36s linear infinite',
+				'cbt-marquee': 'cbt-marquee 72s linear infinite',
 			},
 			backdropFilter: {
 				'none': 'none',

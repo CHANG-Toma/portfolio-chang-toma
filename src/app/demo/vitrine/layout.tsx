@@ -1,28 +1,36 @@
 import type { CSSProperties, ReactNode } from "react";
 import type { Metadata } from "next";
-import { Outfit } from "next/font/google";
+import { Cormorant_Garamond, Outfit } from "next/font/google";
 
-const outfit = Outfit({
+const display = Cormorant_Garamond({
   subsets: ["latin"],
-  variable: "--font-vitrine-body",
-  weight: ["400", "500", "600", "700", "800"],
+  variable: "--font-aria-display",
+  weight: ["400", "500", "600", "700"],
+  style: ["normal", "italic"],
+});
+
+const body = Outfit({
+  subsets: ["latin"],
+  variable: "--font-aria-body",
+  weight: ["300", "400", "500", "600"],
 });
 
 export const metadata: Metadata = {
   title: "Aria Coach — Démo Site Vitrine",
   description:
-    "Démonstration CodeByToma : site vitrine coaching moderne et coloré.",
+    "Démonstration CodeByToma : site vitrine coaching, style studio éditorial.",
   robots: { index: false, follow: false },
 };
 
+/** Studio éditorial — encre, lin, accent feuille. */
 const themeVars = {
-  ["--vk-bg"]: "#f3f6ff",
-  ["--vk-ink"]: "#12141c",
-  ["--vk-muted"]: "#5c6478",
-  ["--vk-accent"]: "#ff4f2e",
-  ["--vk-blue"]: "#4f6ef7",
-  ["--vk-mint"]: "#b8f2d8",
-  ["--vk-surface"]: "#ffffff",
+  ["--vk-bg"]: "#e9ebe6",
+  ["--vk-ink"]: "#1a1f1c",
+  ["--vk-muted"]: "#5c645e",
+  ["--vk-accent"]: "#3d5c48",
+  ["--vk-line"]: "rgba(26, 31, 28, 0.12)",
+  ["--vk-surface"]: "#f4f5f1",
+  ["--vk-deep"]: "#121612",
 } as CSSProperties;
 
 export default function VitrineDemoLayout({
@@ -32,7 +40,7 @@ export default function VitrineDemoLayout({
 }) {
   return (
     <div
-      className={`${outfit.variable} font-[family-name:var(--font-vitrine-body)]`}
+      className={`${display.variable} ${body.variable} font-[family-name:var(--font-aria-body)]`}
       style={themeVars}
     >
       {children}

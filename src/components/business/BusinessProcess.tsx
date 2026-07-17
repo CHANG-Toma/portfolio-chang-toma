@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 const steps = [
   {
     title: "On crée votre site",
-    text: "Frais de mise en place unique de 149 € — votre site est prêt rapidement, sans gros investissement de départ.",
+    text: "Frais de lancement unique de 490 € — conception, développement et mise en ligne de votre site.",
   },
   {
     title: "On s’occupe de tout",
@@ -39,8 +39,8 @@ const BusinessProcess = () => {
             Création, accompagnement, évolution
           </h2>
           <p className="mt-4 text-[15px] leading-relaxed text-mist md:text-base">
-            Un démarrage simple avec 149 € de mise en place, puis un abonnement
-            qui s’adapte à votre croissance.
+            Un démarrage clair avec 490 € de lancement, puis un abonnement
+            qui s’adapte à votre niveau d’accompagnement.
           </p>
         </motion.div>
 
