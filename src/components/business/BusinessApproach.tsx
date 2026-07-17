@@ -33,12 +33,13 @@ const BusinessApproach = () => {
             </p>
             <p>
               Nous restons disponibles pour répondre à vos besoins et faire évoluer
-              votre présence digitale.
+              votre présence digitale — du site vitrine à l&apos;application web
+              sur-mesure.
             </p>
             <p className="text-snow">
-              Notre objectif n&apos;est pas seulement de créer un site internet.
-              Notre objectif est de devenir votre partenaire technique sur le long
-              terme.
+              Notre objectif n&apos;est pas seulement de livrer un site internet.
+              Notre objectif est de devenir votre partenaire technique, de la
+              création à l&apos;accompagnement dans la durée.
             </p>
           </div>
         </motion.div>

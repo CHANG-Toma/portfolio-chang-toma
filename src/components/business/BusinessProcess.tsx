@@ -9,16 +9,16 @@ const steps = [
     text: "Nous prenons le temps de comprendre votre activité et vos objectifs.",
   },
   {
-    title: "Nous créons votre site",
-    text: "Nous concevons un site moderne, rapide et adapté à votre image.",
+    title: "Nous créons votre projet",
+    text: "Site vitrine, application web ou boutique Shopify : nous concevons une solution adaptée à vos besoins.",
   },
   {
     title: "Mise en ligne",
-    text: "Votre site est publié avec votre nom de domaine et hébergé sur une infrastructure sécurisée.",
+    text: "Votre site est livré clé en main après un paiement unique, prêt à accueillir vos visiteurs ou clients.",
   },
   {
     title: "Nous vous accompagnons",
-    text: "Maintenance, sécurité, mises à jour et assistance : nous restons à vos côtés.",
+    text: "Vous pouvez souscrire un abonnement pour l'hébergement, la maintenance, la sécurité et le support.",
   },
 ];
 

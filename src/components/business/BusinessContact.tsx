@@ -26,8 +26,9 @@ const BusinessContact = () => {
               Prêt à développer votre présence en ligne&nbsp;?
             </h2>
             <p className="mt-4 max-w-lg text-[15px] leading-relaxed text-mist md:text-base">
-              Votre site internet, hébergé, sécurisé et accompagné à partir de
-              49€/mois.
+              Sites vitrines dès 990 €, applications web et e-commerce Shopify.
+              Abonnement optionnel dès 49 €/mois pour l&apos;hébergement et la
+              maintenance.
             </p>
             <a
               href="mailto:toma11chang@gmail.com?subject=CodeByToma%20—%20Devis%20gratuit"

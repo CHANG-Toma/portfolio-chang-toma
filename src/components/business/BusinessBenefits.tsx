@@ -5,13 +5,13 @@ import { motion, useInView } from "framer-motion";
 import { Check } from "lucide-react";
 
 const benefits = [
-  "Création de votre site internet",
-  "Hébergement sécurisé inclus",
-  "Nom de domaine inclus",
-  "Maintenance technique",
-  "Sauvegardes automatiques",
-  "Support réactif",
-  "Développeur Full-Stack dédié",
+  "Sites vitrines dès 990 €",
+  "Applications web sur-mesure",
+  "Boutiques Shopify",
+  "Abonnement optionnel dès 49 €/mois",
+  "Design personnalisé",
+  "Un développeur Full-Stack dédié",
+  "Accompagnement dans la durée",
 ];
 
 const BusinessBenefits = () => {
@@ -33,7 +33,8 @@ const BusinessBenefits = () => {
           </h2>
           <p className="mt-4 text-[15px] leading-relaxed text-mist md:text-base">
             Parce qu&apos;un site internet ne doit pas seulement être beau. Il doit
-            être fiable, rapide et évoluer avec votre entreprise.
+            être fiable, rapide et évoluer avec votre activité — de la création
+            à l&apos;accompagnement technique.
           </p>
         </motion.div>
 

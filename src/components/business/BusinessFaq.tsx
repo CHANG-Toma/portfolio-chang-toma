@@ -4,29 +4,7 @@ import React, { useRef, useState } from "react";
 import { motion, useInView, AnimatePresence } from "framer-motion";
 import { ChevronDown } from "lucide-react";
 import { cn } from "@/lib/utils";
-
-const faqs = [
-  {
-    q: "La création est-elle vraiment offerte ?",
-    a: "Oui. La création de votre site est incluse dans nos offres avec un engagement de 24 mois.",
-  },
-  {
-    q: "Suis-je propriétaire de mon site ?",
-    a: "Vous restez propriétaire de votre contenu et de votre nom de domaine. Les modalités concernant le code source et les développements spécifiques sont précisées dans le contrat.",
-  },
-  {
-    q: "Puis-je demander des modifications ?",
-    a: "Oui. Les petites modifications de contenu sont incluses selon votre formule. Les évolutions importantes font simplement l’objet d’un devis avant toute intervention.",
-  },
-  {
-    q: "Combien de temps faut-il pour créer un site ?",
-    a: "En moyenne entre une et deux semaines selon la complexité du projet et la disponibilité des contenus.",
-  },
-  {
-    q: "Que se passe-t-il si mon activité évolue ?",
-    a: "Votre site évolue avec vous. Nous pouvons ajouter des fonctionnalités, développer de nouveaux outils ou créer des automatisations adaptées à votre entreprise.",
-  },
-];
+import { offersFaq } from "@/data/businessOffers";
 
 const BusinessFaq = () => {
   const ref = useRef<HTMLDivElement>(null);
@@ -52,7 +30,7 @@ const BusinessFaq = () => {
         </motion.div>
 
         <div className="mt-12 max-w-3xl divide-y divide-[var(--cbt-border)] border-y border-cbtBorder">
-          {faqs.map((item, i) => {
+          {offersFaq.map((item, i) => {
             const isOpen = open === i;
             return (
               <div key={item.q}>

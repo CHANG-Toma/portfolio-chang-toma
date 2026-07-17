@@ -62,8 +62,8 @@ const BusinessHero = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.55, ease: [0.22, 1, 0.36, 1] }}
           >
-            Votre partenaire digital,&nbsp;
-            <span className="font-normal text-mist">à partir de 49€/mois.</span>
+            Votre site web, créé sur-mesure,&nbsp;
+            <span className="font-normal text-mist">à partir de 990 €.</span>
           </motion.h1>
 
           <motion.p
@@ -72,9 +72,9 @@ const BusinessHero = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.45, delay: 0.15 }}
           >
-            Développez votre présence en ligne sans investissement important.
-            CodeByToma crée votre site internet, l&apos;héberge, le sécurise et
-            l&apos;accompagne dans le temps grâce à un abonnement simple et transparent.
+            Sites vitrines, applications web et boutiques Shopify. Un paiement
+            unique pour la création, puis un abonnement optionnel pour
+            l&apos;hébergement, la sécurité et la maintenance.
           </motion.p>
 
           <motion.div

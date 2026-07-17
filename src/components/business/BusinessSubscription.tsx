@@ -5,13 +5,13 @@ import { motion, useInView } from "framer-motion";
 import { Check } from "lucide-react";
 
 const points = [
-  "Aucun investissement important",
-  "Hébergement inclus",
-  "Maintenance continue",
-  "Sécurité renforcée",
+  "Hébergement et nom de domaine",
+  "Certificat SSL et sécurité",
   "Sauvegardes automatiques",
-  "Un interlocuteur unique",
-  "Un site qui évolue avec votre entreprise",
+  "Maintenance technique",
+  "Support réactif",
+  "Formule Sérénité dès 99 €/mois",
+  "Engagement 12 mois, reconduction tacite",
 ];
 
 const BusinessSubscription = () => {
@@ -35,15 +35,22 @@ const BusinessSubscription = () => {
               Pourquoi choisir un abonnement&nbsp;?
             </h2>
             <p className="mt-4 text-[15px] leading-relaxed text-mist md:text-base">
-              Créer un site est une première étape. Le maintenir à jour, sécurisé
-              et performant est tout aussi important.
+              Une fois votre site livré, vous pouvez souscrire un abonnement pour
+              le maintenir à jour, sécurisé et performant — sans gérer la partie
+              technique.
             </p>
             <p className="mt-6 text-[15px] font-medium text-snow">
               Vous vous concentrez sur votre activité.
               <span className="mt-1 block font-normal text-mist">
-                Nous nous occupons du reste.
+                Nous gérons l&apos;hébergement, la sécurité et la maintenance.
               </span>
             </p>
+            <a
+              href="#offres"
+              className="mt-6 inline-flex text-[13px] font-medium text-snow underline decoration-cbtBorderStrong underline-offset-4 transition-colors hover:decoration-snow"
+            >
+              Voir les formules d&apos;abonnement
+            </a>
           </motion.div>
 
           <ul className="space-y-3">

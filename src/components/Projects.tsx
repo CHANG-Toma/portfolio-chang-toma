@@ -29,7 +29,7 @@ const Projects = () => {
     {
       title: 'CodeByToma',
       description:
-        "Site de mon auto-entreprise : offres (Présence, Business, Sur Mesure), processus et prise de contact client.",
+        "Site de mon auto-entreprise : offres de création (site vitrine, application web, e-commerce) et abonnement maintenance.",
       technologies: ['React', 'Next.js', 'Tailwind CSS', 'Vercel'],
       demo: 'https://www.codebytoma.dev/',
     },

@@ -13,26 +13,28 @@ const figtree = Figtree({
 
 export const metadata: Metadata = {
   title: {
-    default: "CodeByToma — Partenaire digital dès 49€/mois",
+    default: "CodeByToma — Création de sites web sur-mesure",
     template: "%s | CodeByToma",
   },
   description:
-    "CodeByToma crée, héberge et accompagne votre site internet à partir de 49€/mois. Abonnement simple et transparent pour indépendants et PME.",
+    "Sites vitrines dès 990€, applications web et e-commerce Shopify. Abonnement hébergement & maintenance dès 49€/mois. Devis gratuit.",
   authors: [{ name: "Toma Chang", url: "https://www.codebytoma.dev" }],
   keywords: [
     "CodeByToma",
     "création site web",
-    "abonnement site internet",
     "site vitrine",
+    "application web",
+    "e-commerce Shopify",
+    "abonnement site internet",
     "indépendants",
     "PME",
     "développement web",
     "Toma Chang",
   ],
   openGraph: {
-    title: "CodeByToma — Partenaire digital dès 49€/mois",
+    title: "CodeByToma — Création de sites web sur-mesure",
     description:
-      "Votre site internet créé, hébergé, sécurisé et accompagné. Devis gratuit.",
+      "Sites vitrines, applications web et boutiques Shopify. Abonnement optionnel pour l'hébergement et la maintenance. Devis gratuit.",
     url: "https://www.codebytoma.dev",
     siteName: "CodeByToma",
     locale: "fr_FR",
