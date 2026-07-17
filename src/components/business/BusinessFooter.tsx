@@ -13,10 +13,12 @@ const BusinessFooter = () => {
           <p className="text-[13px] text-mist">
             <span className="font-medium text-snow">CodeByToma</span>
             <span className="mx-2 opacity-40">·</span>
+            Code by Toma
+            <span className="mx-2 opacity-40">·</span>
             Création de sites web pour freelances & PME
           </p>
           <p className="mt-2 text-[12px] text-mist/70">
-            © {year} Toma Chang — Tous droits réservés
+            © {year} Toma Chang (Code by Toma) — Tous droits réservés
           </p>
         </div>
         <nav aria-label="Pied de page" className="flex flex-wrap gap-x-5 gap-y-2 text-[12px] text-mist">

@@ -1,10 +1,19 @@
 import { offersFaq } from "@/data/businessOffers";
-import { CONTACT, SITE_DESCRIPTION, SITE_NAME, SITE_TAGLINE, SITE_URL } from "@/lib/seo";
+import {
+  CONTACT,
+  SITE_DESCRIPTION,
+  SITE_NAME,
+  SITE_NAME_ALIASES,
+  SITE_TAGLINE,
+  SITE_URL,
+} from "@/lib/seo";
 
 const organization = {
   "@type": "Organization",
   "@id": `${SITE_URL}/#organization`,
   name: SITE_NAME,
+  alternateName: [...SITE_NAME_ALIASES],
+  legalName: "Code by Toma",
   url: SITE_URL,
   logo: {
     "@type": "ImageObject",
@@ -16,7 +25,9 @@ const organization = {
   founder: {
     "@type": "Person",
     name: "Toma Chang",
+    alternateName: ["Toma", "Code by Toma"],
     url: SITE_URL,
+    jobTitle: "Développeur Full-Stack",
   },
   sameAs: [] as string[],
   areaServed: {
@@ -29,6 +40,7 @@ const professionalService = {
   "@type": "ProfessionalService",
   "@id": `${SITE_URL}/#service`,
   name: SITE_NAME,
+  alternateName: [...SITE_NAME_ALIASES],
   description: SITE_DESCRIPTION,
   url: SITE_URL,
   image: `${SITE_URL}/images/CodeByToma.png`,
@@ -54,7 +66,8 @@ const professionalService = {
       name: "Site Essentiel",
       price: "590",
       priceCurrency: "EUR",
-      description: "Site vitrine moderne, 3–4 pages, mobile, formulaire de contact.",
+      description:
+        "Site vitrine moderne, 3–4 pages, mobile, formulaire de contact.",
       url: `${SITE_URL}/#offres`,
     },
     {
@@ -62,7 +75,8 @@ const professionalService = {
       name: "Site Vitrine Pro",
       price: "990",
       priceCurrency: "EUR",
-      description: "Site immersif futuriste avec animations et effets avancés.",
+      description:
+        "Site immersif futuriste avec animations et effets avancés.",
       url: `${SITE_URL}/#offres`,
     },
   ],
@@ -73,6 +87,7 @@ const website = {
   "@id": `${SITE_URL}/#website`,
   url: SITE_URL,
   name: SITE_NAME,
+  alternateName: [...SITE_NAME_ALIASES],
   description: SITE_TAGLINE,
   publisher: { "@id": `${SITE_URL}/#organization` },
   inLanguage: "fr-FR",

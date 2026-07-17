@@ -54,7 +54,7 @@ const BusinessHero = () => {
       <div className="relative z-10 mx-auto grid w-full max-w-6xl items-center gap-12 md:grid-cols-[1.2fr_0.8fr] md:gap-16">
         <div>
           <ShinyText
-            text="CodeByToma · Sites & accompagnement"
+            text="CodeByToma · Code by Toma · Sites & accompagnement"
             speed={3}
             color="#8892b0"
             shineColor="#e6f1ff"
@@ -192,7 +192,7 @@ const BusinessHero = () => {
               <div className="relative h-52 w-52 overflow-hidden rounded-full border border-cbtBorder bg-surface shadow-[0_0_40px_-12px_var(--cbt-snow)] md:h-64 md:w-64">
                 <Image
                   src="/images/CodeByToma.png"
-                  alt="Logo CodeByToma"
+                  alt="Logo CodeByToma — Code by Toma, développeur Full-Stack"
                   width={256}
                   height={256}
                   priority
