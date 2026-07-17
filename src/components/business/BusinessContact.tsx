@@ -1,13 +1,10 @@
 "use client";
 
-import React, { useRef } from "react";
-import { motion, useInView } from "framer-motion";
+import React from "react";
+import { motion } from "framer-motion";
 import { Mail, Phone, MapPin, ArrowRight } from "lucide-react";
 
 const BusinessContact = () => {
-  const ref = useRef<HTMLDivElement>(null);
-  const isInView = useInView(ref, { once: true, amount: 0.3 });
-
   return (
     <section
       id="contact"
@@ -15,10 +12,10 @@ const BusinessContact = () => {
     >
       <div className="mx-auto max-w-6xl">
         <motion.div
-          ref={ref}
           initial={{ opacity: 0, y: 14 }}
-          animate={isInView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.45 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.25 }}
+          transition={{ duration: 0.4 }}
           className="grid gap-10 rounded-xl border border-cbtBorder bg-gradient-to-br from-cbtFill to-transparent p-8 md:grid-cols-[1.3fr_0.7fr] md:items-center md:gap-12 md:p-12"
         >
           <div>
@@ -26,13 +23,12 @@ const BusinessContact = () => {
               Prêt à développer votre présence en ligne&nbsp;?
             </h2>
             <p className="mt-4 max-w-lg text-[15px] leading-relaxed text-mist md:text-base">
-              Sites vitrines dès 990 €, applications web et e-commerce Shopify.
-              Abonnement optionnel dès 49 €/mois pour l&apos;hébergement et la
-              maintenance.
+              Site Essentiel (moderne) dès 590 €, Pro futuriste dès 990 €, puis
+              abonnement évolutif dès 29 €/mois — et du sur-mesure si besoin.
             </p>
             <a
               href="mailto:toma11chang@gmail.com?subject=CodeByToma%20—%20Devis%20gratuit"
-              className="group mt-8 inline-flex items-center gap-2 rounded-md bg-snow px-5 py-2.5 text-[13px] font-medium text-ink transition-opacity hover:opacity-90"
+              className="group mt-8 inline-flex items-center gap-2 rounded-md bg-snow px-5 py-2.5 text-[13px] font-medium text-ink"
             >
               Obtenir mon devis gratuit
               <ArrowRight className="h-3.5 w-3.5 transition-transform group-hover:translate-x-0.5" />

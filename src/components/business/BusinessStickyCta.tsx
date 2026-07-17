@@ -30,7 +30,7 @@ const BusinessStickyCta = () => {
     >
       <a
         href="mailto:toma11chang@gmail.com?subject=CodeByToma%20—%20Devis%20gratuit"
-        className="flex w-full items-center justify-center gap-2 rounded-md bg-snow py-3 text-[13px] font-medium text-ink"
+        className="cursor-target flex w-full items-center justify-center gap-2 rounded-md bg-snow py-3 text-[13px] font-medium text-ink"
       >
         <Mail className="h-3.5 w-3.5" />
         Obtenir mon devis gratuit

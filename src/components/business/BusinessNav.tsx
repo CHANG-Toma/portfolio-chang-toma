@@ -1,7 +1,6 @@
 "use client";
 
 import React, { useEffect, useState } from "react";
-import Link from "next/link";
 import { Menu, X } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { createPortal } from "react-dom";
@@ -79,9 +78,6 @@ const BusinessNav = () => {
           <div className="mt-2">
             <ThemeToggle />
           </div>
-          <Link href="/portfolio" onClick={() => setIsOpen(false)} className="text-sm text-mist">
-            Portfolio
-          </Link>
         </nav>
       </div>,
       document.body
@@ -116,12 +112,6 @@ const BusinessNav = () => {
               </a>
             );
           })}
-          <Link
-            href="/portfolio"
-            className="ml-2 px-3 py-1.5 text-[13px] text-mist/50 hover:text-mist"
-          >
-            Portfolio
-          </Link>
           <div className="ml-2">
             <ThemeToggle />
           </div>

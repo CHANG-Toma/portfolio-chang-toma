@@ -11,6 +11,7 @@ import BusinessFaq from "@/components/business/BusinessFaq";
 import BusinessContact from "@/components/business/BusinessContact";
 import BusinessFooter from "@/components/business/BusinessFooter";
 import BusinessStickyCta from "@/components/business/BusinessStickyCta";
+import BusinessMarquee from "@/components/business/BusinessMarquee";
 
 const HomePage = () => {
   return (
@@ -18,9 +19,10 @@ const HomePage = () => {
       <BusinessNav />
       <main>
         <BusinessHero />
+        <BusinessMarquee />
         <BusinessBenefits />
-        <BusinessOffers />
         <BusinessProcess />
+        <BusinessOffers />
         <BusinessSubscription />
         <BusinessApproach />
         <BusinessFaq />

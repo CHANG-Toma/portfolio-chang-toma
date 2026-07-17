@@ -4,6 +4,9 @@ import React, { useEffect, useRef } from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
+import Aurora from "@/components/Aurora";
+import BlurText from "@/components/BlurText";
+import ShinyText from "@/components/ShinyText";
 
 const BusinessHero = () => {
   const logoGroupRef = useRef<HTMLDivElement>(null);
@@ -19,7 +22,8 @@ const BusinessHero = () => {
     const onLeave = () => {
       if (!logoGroupRef.current) return;
       logoGroupRef.current.style.transition = "transform 0.5s ease-out";
-      logoGroupRef.current.style.transform = "perspective(900px) rotateX(0deg) rotateY(0deg)";
+      logoGroupRef.current.style.transform =
+        "perspective(900px) rotateX(0deg) rotateY(0deg)";
     };
     window.addEventListener("mousemove", onMove);
     window.addEventListener("mouseleave", onLeave);
@@ -36,70 +40,74 @@ const BusinessHero = () => {
     >
       <div className="pointer-events-none absolute inset-0" aria-hidden>
         <div className="absolute inset-0 bg-ink" />
-        <motion.div
-          className="absolute h-[55vh] w-[55vw] rounded-full bg-cbtGlow blur-[100px]"
-          style={{ top: "-10%", right: "-5%" }}
-          animate={{
-            x: [0, -40, 20, 0],
-            y: [0, 30, -10, 0],
-            opacity: [0.35, 0.55, 0.4, 0.35],
-          }}
-          transition={{ duration: 14, repeat: Infinity, ease: "easeInOut" }}
-        />
-        <motion.div
-          className="absolute h-[40vh] w-[40vw] rounded-full bg-cbtGlow blur-[90px]"
-          style={{ bottom: "5%", left: "-10%" }}
-          animate={{ x: [0, 30, 0], y: [0, -25, 0] }}
-          transition={{ duration: 11, repeat: Infinity, ease: "easeInOut" }}
-        />
+        <div className="absolute inset-0 opacity-70">
+          <Aurora
+            colorStops={["#8892b0", "#e6f1ff", "#233554"]}
+            amplitude={0.95}
+            blend={0.55}
+            speed={0.65}
+          />
+        </div>
+        <div className="absolute inset-0 bg-gradient-to-b from-ink/40 via-transparent to-ink" />
       </div>
 
       <div className="relative z-10 mx-auto grid w-full max-w-6xl items-center gap-12 md:grid-cols-[1.2fr_0.8fr] md:gap-16">
         <div>
-          <motion.h1
-            className="max-w-xl text-[2.35rem] font-semibold leading-[1.12] tracking-tight text-snow sm:text-5xl md:text-[3.1rem]"
-            initial={{ opacity: 0, y: 18 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.55, ease: [0.22, 1, 0.36, 1] }}
-          >
-            Votre site web, créé sur-mesure,&nbsp;
-            <span className="font-normal text-mist">à partir de 990 €.</span>
-          </motion.h1>
+          <ShinyText
+            text="CodeByToma · Sites & accompagnement"
+            speed={3}
+            color="#8892b0"
+            shineColor="#e6f1ff"
+            className="text-[12px] font-medium uppercase tracking-[0.16em]"
+          />
+
+          <div className="mt-4">
+            <BlurText
+              text="Une présence en ligne professionnelle,"
+              delay={50}
+              animateBy="words"
+              direction="top"
+              className="max-w-xl text-[2.35rem] font-semibold leading-[1.12] tracking-tight text-snow sm:text-5xl md:text-[3.1rem]"
+            />
+            <BlurText
+              text="qui grandit avec vous."
+              delay={70}
+              animateBy="words"
+              direction="top"
+              className="mt-1 max-w-xl text-[2.35rem] font-normal leading-[1.12] tracking-tight text-mist sm:text-5xl md:text-[3.1rem]"
+            />
+          </div>
 
           <motion.p
             className="mt-6 max-w-lg text-[15px] leading-relaxed text-mist md:text-base"
             initial={{ opacity: 0, y: 14 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.45, delay: 0.15 }}
+            transition={{ duration: 0.45, delay: 0.2 }}
           >
-            Sites vitrines, applications web et boutiques Shopify. Un paiement
-            unique pour la création, puis un abonnement optionnel pour
-            l&apos;hébergement, la sécurité et la maintenance.
+            Un site vitrine crédible en paiement unique, puis un abonnement
+            évolutif pour l&apos;hébergement, la maintenance et la visibilité —
+            qui monte en gamme si votre activité le demande.
           </motion.p>
 
           <motion.div
             className="mt-9 flex flex-wrap items-center gap-3"
             initial={{ opacity: 0, y: 14 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.45, delay: 0.25 }}
+            transition={{ duration: 0.45, delay: 0.3 }}
           >
-            <motion.a
+            <a
               href="mailto:toma11chang@gmail.com?subject=CodeByToma%20—%20Devis%20gratuit"
-              whileHover={{ y: -2, scale: 1.02 }}
-              whileTap={{ scale: 0.98 }}
               className="group inline-flex items-center gap-2 rounded-md bg-snow px-5 py-2.5 text-[13px] font-medium text-ink"
             >
               Obtenir un devis gratuit
               <ArrowRight className="h-3.5 w-3.5 transition-transform group-hover:translate-x-0.5" />
-            </motion.a>
-            <motion.a
+            </a>
+            <a
               href="#offres"
-              whileHover={{ y: -2 }}
-              whileTap={{ scale: 0.98 }}
               className="rounded-md border border-cbtBorder px-5 py-2.5 text-[13px] font-medium text-snow transition-colors hover:border-cbtBorderStrong"
             >
               Découvrir nos offres
-            </motion.a>
+            </a>
           </motion.div>
         </div>
 
@@ -110,12 +118,21 @@ const BusinessHero = () => {
             animate={{ opacity: 1, scale: 1, y: [0, -10, 0] }}
             transition={{
               opacity: { duration: 0.6, delay: 0.15 },
-              scale: { duration: 0.6, delay: 0.15, type: "spring", stiffness: 120 },
-              y: { duration: 4.5, repeat: Infinity, ease: "easeInOut", delay: 0.6 },
+              scale: {
+                duration: 0.6,
+                delay: 0.15,
+                type: "spring",
+                stiffness: 120,
+              },
+              y: {
+                duration: 4.5,
+                repeat: Infinity,
+                ease: "easeInOut",
+                delay: 0.6,
+              },
             }}
             whileHover={{ scale: 1.04 }}
           >
-            {/* Halo + orbites + logo basculent ensemble avec la souris */}
             <div
               ref={logoGroupRef}
               className="relative will-change-transform"
@@ -123,7 +140,10 @@ const BusinessHero = () => {
             >
               <motion.div
                 className="absolute -inset-8 rounded-full bg-snow/10 blur-3xl"
-                animate={{ opacity: [0.2, 0.45, 0.2], scale: [0.92, 1.08, 0.92] }}
+                animate={{
+                  opacity: [0.2, 0.45, 0.2],
+                  scale: [0.92, 1.08, 0.92],
+                }}
                 transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
                 aria-hidden
               />
@@ -178,7 +198,12 @@ const BusinessHero = () => {
                   className="pointer-events-none absolute inset-0 bg-gradient-to-r from-transparent via-snow/25 to-transparent"
                   initial={{ x: "-120%" }}
                   animate={{ x: ["-120%", "120%"] }}
-                  transition={{ duration: 2.8, repeat: Infinity, repeatDelay: 3.5, ease: "easeInOut" }}
+                  transition={{
+                    duration: 2.8,
+                    repeat: Infinity,
+                    repeatDelay: 3.5,
+                    ease: "easeInOut",
+                  }}
                   aria-hidden
                 />
               </div>

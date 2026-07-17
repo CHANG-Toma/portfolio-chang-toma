@@ -1,63 +1,75 @@
 export type ShowcaseProject = {
   id: string;
   name: string;
-  type: "Site vitrine" | "E-commerce" | "Premium";
-  style: "Moderne" | "Minimaliste" | "Premium";
+  type: "Site vitrine" | "E-commerce" | "Application Web";
+  style: "Pro" | "Essentiel";
   url: string;
+  image?: string;
   previewFrom: string;
   previewTo: string;
+  live?: boolean;
 };
 
 export const showcaseProjects: ShowcaseProject[] = [
   {
-    id: "codebytoma",
-    name: "CodeByToma",
+    id: "maison-lune",
+    name: "Maison Lune",
     type: "Site vitrine",
-    style: "Moderne",
-    url: "https://www.codebytoma.dev/",
-    previewFrom: "from-slate-800",
-    previewTo: "to-slate-950",
-  },
-  {
-    id: "maxiloc",
-    name: "MaxiLoc",
-    type: "Premium",
-    style: "Premium",
-    url: "https://github.com/CHANG-Toma/maxi-loc",
-    previewFrom: "from-indigo-900",
-    previewTo: "to-slate-900",
-  },
-  {
-    id: "lamusee",
-    name: "Lamusée Paris",
-    type: "E-commerce",
-    style: "Minimaliste",
-    url: "#contact",
-    previewFrom: "from-neutral-800",
+    style: "Pro",
+    url: "/demo/gastro",
+    image: "/images/showcase/maison-lune.jpg",
+    previewFrom: "from-amber-800",
     previewTo: "to-stone-950",
+    live: true,
+  },
+  {
+    id: "aria-coach",
+    name: "Aria Coach",
+    type: "Site vitrine",
+    style: "Essentiel",
+    url: "/demo/vitrine",
+    image: "/images/showcase/aria-coach.jpg",
+    previewFrom: "from-orange-400",
+    previewTo: "to-indigo-500",
+    live: true,
+  },
+  {
+    id: "atelier-seve",
+    name: "Atelier Sève",
+    type: "Site vitrine",
+    style: "Essentiel",
+    url: "/demo/coiffure",
+    image: "/images/showcase/atelier-seve.jpg",
+    previewFrom: "from-rose-900",
+    previewTo: "to-stone-950",
+    live: true,
   },
 ];
 
 export const offersFaq = [
   {
     q: "Quel est le délai de création d'un site ?",
-    a: "En moyenne entre une et trois semaines selon le type de projet, la complexité et la disponibilité de vos contenus. Nous vous communiquons un planning précis dès le démarrage.",
+    a: "En moyenne entre une et trois semaines selon la formule (Essentiel ou Vitrine Pro), la complexité et la disponibilité de vos contenus. Nous vous communiquons un planning précis dès le démarrage.",
   },
   {
     q: "Puis-je acheter mon site sans abonnement ?",
-    a: "Oui. La création de votre site fait l'objet d'un paiement unique. L'abonnement est optionnel et sert à l'hébergement, la sécurité et l'accompagnement technique de votre site.",
+    a: "Oui. La création fait l'objet d'un paiement unique (dès 590 €). L'abonnement est optionnel et couvre hébergement, sécurité et accompagnement technique.",
   },
   {
-    q: "Quelle est la différence entre un site vitrine et une application web ?",
-    a: "Le site vitrine présente votre activité et convertit vos visiteurs. L'application web va plus loin avec des fonctionnalités sur-mesure : espace client, tableau de bord, gestion de données ou process métier spécifiques.",
+    q: "Quelle est la différence entre Site Essentiel et Site Vitrine Pro ?",
+    a: "L'Essentiel (590 €) est un site moderne de base : clair, rapide à lancer, suffisant pour exister en ligne. Le Vitrine Pro (990 €) est la version futuriste : design immersif, animations et effets visuels pour une image plus mémorable.",
+  },
+  {
+    q: "Proposez-vous des applications web ou de l'e-commerce ?",
+    a: "Oui, mais ces projets plus complexes (applications, e-commerce, réservation, espace client…) sont étudiés sur-mesure. Contactez-moi pour en discuter — sans grille de prix figée.",
   },
   {
     q: "Que comprend la maintenance ?",
-    a: "Selon la formule choisie : hébergement, nom de domaine, SSL, sauvegardes, support et, selon l'offre, modifications de contenu ou optimisations. La formule Sérénité couvre l'essentiel pour la plupart des entreprises.",
+    a: "Essentiel (29 €) : technique seule (hébergement, SSL, sauvegardes, monitoring) — le contenu reste hors forfait. Sérénité (79 €) : 2 modifications de contenu / mois + perf/SEO de base + support prioritaire. Premium (199 €) : point mensuel, jusqu’à 3h d’évolutions / mois, et priorité sur les projets sur-mesure.",
   },
   {
     q: "Puis-je faire évoluer mon site plus tard ?",
-    a: "Absolument. Votre site peut grandir avec votre activité : nouvelles pages, fonctionnalités, boutique en ligne, application web ou refonte. Nous vous accompagnons à chaque étape.",
+    a: "Absolument. Vous pouvez passer d'un Essentiel à un rendu plus immersif, faire évoluer votre abonnement, ou passer sur du sur-mesure quand votre activité le demande.",
   },
   {
     q: "Quel est l'engagement de l'abonnement ?",

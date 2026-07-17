@@ -1,12 +1,9 @@
 "use client";
 
-import React, { useRef } from "react";
-import { motion, useInView } from "framer-motion";
+import React from "react";
+import { motion } from "framer-motion";
 
 const BusinessApproach = () => {
-  const ref = useRef<HTMLDivElement>(null);
-  const isInView = useInView(ref, { once: true, amount: 0.3 });
-
   return (
     <section
       id="approche"
@@ -14,32 +11,27 @@ const BusinessApproach = () => {
     >
       <div className="mx-auto max-w-6xl">
         <motion.div
-          ref={ref}
           initial={{ opacity: 0, y: 14 }}
-          animate={isInView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.45 }}
-          className="max-w-2xl"
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.3 }}
+          transition={{ duration: 0.4 }}
         >
           <p className="text-[12px] font-medium uppercase tracking-[0.16em] text-mist/70">
             Pourquoi CodeByToma
           </p>
-          <h2 className="mt-3 text-2xl font-semibold tracking-tight text-snow md:text-[1.85rem]">
-            Un accompagnement de A à Z, pas une plateforme anonyme
+          <h2 className="mt-3 max-w-2xl text-2xl font-semibold tracking-tight text-snow md:text-[1.85rem]">
+            Un partenaire technique, pas une plateforme anonyme
           </h2>
-          <div className="mt-6 space-y-4 text-[15px] leading-relaxed text-mist md:text-base">
+          <div className="mt-6 max-w-2xl space-y-4 text-[15px] leading-relaxed text-mist md:text-base">
             <p>
-              Contrairement aux plateformes de création de sites, nous vous
-              accompagnons de A à Z. Vous n&apos;êtes jamais seul.
-            </p>
-            <p>
-              Nous restons disponibles pour répondre à vos besoins et faire évoluer
-              votre présence digitale — du site vitrine à l&apos;application web
-              sur-mesure.
+              Nous créons votre site vitrine pour vous rendre visible et
+              crédible, puis nous gérons l&apos;hébergement, la maintenance et
+              la performance au quotidien.
             </p>
             <p className="text-snow">
-              Notre objectif n&apos;est pas seulement de livrer un site internet.
-              Notre objectif est de devenir votre partenaire technique, de la
-              création à l&apos;accompagnement dans la durée.
+              Quand votre activité grandit, votre abonnement peut intégrer des
+              fonctionnalités métier — réservation, devis, espace client — sans
+              tout recommencer.
             </p>
           </div>
         </motion.div>

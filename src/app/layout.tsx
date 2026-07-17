@@ -17,14 +17,13 @@ export const metadata: Metadata = {
     template: "%s | CodeByToma",
   },
   description:
-    "Sites vitrines dès 990€, applications web et e-commerce Shopify. Abonnement hébergement & maintenance dès 49€/mois. Devis gratuit.",
+    "Site Essentiel moderne dès 590€, Site Pro futuriste dès 990€. Abonnement dès 29€/mois. Sur-mesure sur devis.",
   authors: [{ name: "Toma Chang", url: "https://www.codebytoma.dev" }],
   keywords: [
     "CodeByToma",
     "création site web",
     "site vitrine",
-    "application web",
-    "e-commerce Shopify",
+    "site essentiel",
     "abonnement site internet",
     "indépendants",
     "PME",
@@ -34,7 +33,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "CodeByToma — Création de sites web sur-mesure",
     description:
-      "Sites vitrines, applications web et boutiques Shopify. Abonnement optionnel pour l'hébergement et la maintenance. Devis gratuit.",
+      "Sites dès 590€, abonnement évolutif dès 29€/mois. Sur-mesure pour les besoins métier avancés. Devis gratuit.",
     url: "https://www.codebytoma.dev",
     siteName: "CodeByToma",
     locale: "fr_FR",
