@@ -188,15 +188,6 @@ const ShowcaseCard = ({
       <div className="flex flex-1 flex-col p-6">
         <h3 className="text-lg font-semibold text-snow">{project.name}</h3>
 
-        <div className="mt-3 flex flex-wrap gap-2">
-          <span className="rounded-md border border-cbtBorder bg-cbtFill/50 px-2 py-0.5 text-[11px] text-mist">
-            {project.type}
-          </span>
-          <span className="rounded-md border border-cbtBorder bg-cbtFill/50 px-2 py-0.5 text-[11px] text-mist">
-            {project.style}
-          </span>
-        </div>
-
         {isLive ? (
           <a
             href={project.url}
