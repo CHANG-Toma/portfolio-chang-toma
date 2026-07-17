@@ -9,14 +9,14 @@ export const SITE_NAME_ALIASES = [
 ] as const;
 
 export const SITE_TAGLINE =
-  "Abonnement site web pour freelances & PME — dès 29 €/mois";
+  "Abonnement site web pour freelances & PME — dès 39 €/mois";
 
 /**
  * Description Google (~150–160 car. max).
  * Modèle : frais de mise en place + abonnement.
  */
 export const SITE_DESCRIPTION =
-  "Code by Toma : site en ligne dès 149 € de mise en place, puis abonnement dès 29 €/mois. Devis gratuit.";
+  "Code by Toma : site en ligne dès 149 € de mise en place, puis abonnement dès 39 €/mois. Devis gratuit.";
 
 export const SITE_TITLE_DEFAULT = "CodeByToma";
 export const SITE_TITLE_HOME = "CodeByToma";

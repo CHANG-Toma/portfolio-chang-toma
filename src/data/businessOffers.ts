@@ -53,7 +53,7 @@ export const offersFaq = [
   },
   {
     q: "Comment fonctionne la tarification ?",
-    a: "Vous payez 149 € de frais de mise en place (création du site), puis un abonnement mensuel (Essentiel 29 €, Sérénité 79 € ou Premium 199 €) qui couvre hébergement, sécurité et accompagnement. Pas de gros investissement de départ.",
+    a: "Vous payez 149 € de frais de mise en place (création du site), puis un abonnement mensuel (Essentiel 39 €, Sérénité 79 € ou Premium 199 €) qui couvre hébergement, sécurité et accompagnement. Pas de gros investissement de départ.",
   },
   {
     q: "Quelle est la différence entre Essentiel, Sérénité et Premium ?",

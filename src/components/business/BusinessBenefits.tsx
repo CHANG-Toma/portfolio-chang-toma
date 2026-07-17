@@ -6,7 +6,7 @@ import { Check } from "lucide-react";
 
 const benefits = [
   "Mise en place dès 149 €",
-  "Abonnement dès 29 €/mois",
+  "Abonnement dès 39 €/mois",
   "Hébergement & maintenance inclus",
   "Design personnalisé",
   "Un développeur Full-Stack dédié",

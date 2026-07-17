@@ -73,7 +73,7 @@ const professionalService = {
     {
       "@type": "Offer",
       name: "Abonnement Essentiel",
-      price: "29",
+      price: "39",
       priceCurrency: "EUR",
       description:
         "Hébergement, SSL, sauvegardes, monitoring et support e-mail.",

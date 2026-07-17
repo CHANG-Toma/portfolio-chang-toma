@@ -35,7 +35,7 @@ export const pricingAbonnement: PricingAbonnementCard[] = [
     id: "essentiel",
     title: "Essentiel",
     tagline: "Le site tourne — vous ne touchez à rien de technique.",
-    price: "29 €",
+    price: "39 €",
     period: "/mois",
     features: [
       "Hébergement sécurisé + nom de domaine",
