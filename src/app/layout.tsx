@@ -5,9 +5,11 @@ import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import ThemeProvider from "@/components/ThemeProvider";
 import {
+  OG_IMAGE,
   SITE_DESCRIPTION,
   SITE_KEYWORDS,
   SITE_NAME,
+  SITE_TITLE_DEFAULT,
   SITE_URL,
 } from "@/lib/seo";
 
@@ -30,7 +32,7 @@ export const viewport: Viewport = {
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: `${SITE_NAME} — Création de sites web pour freelances & PME`,
+    default: SITE_TITLE_DEFAULT,
     template: `%s | ${SITE_NAME}`,
   },
   description: SITE_DESCRIPTION,
@@ -59,13 +61,23 @@ export const metadata: Metadata = {
     locale: "fr_FR",
     url: SITE_URL,
     siteName: SITE_NAME,
-    title: `${SITE_NAME} — Création de sites web sur-mesure`,
+    title: SITE_TITLE_DEFAULT,
     description: SITE_DESCRIPTION,
+    images: [
+      {
+        url: OG_IMAGE.url,
+        width: OG_IMAGE.width,
+        height: OG_IMAGE.height,
+        alt: OG_IMAGE.alt,
+        type: OG_IMAGE.type,
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
-    title: `${SITE_NAME} — Création de sites web sur-mesure`,
+    title: SITE_TITLE_DEFAULT,
     description: SITE_DESCRIPTION,
+    images: [OG_IMAGE.url],
   },
   icons: {
     icon: [{ url: "/images/CodeByToma.png", type: "image/png" }],
