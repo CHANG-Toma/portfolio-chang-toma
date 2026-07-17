@@ -87,7 +87,7 @@ const GastroDemo = () => {
             Retour CodeByToma
           </Link>
           <DecryptedText
-            text="Démo · Site Vitrine · 990 €"
+            text="Démo · Site vitrine"
             animateOn="view"
             speed={30}
             sequential
@@ -334,8 +334,9 @@ const GastroDemo = () => {
             encryptedClassName="text-[var(--mg-gold)]/40"
           />
           <p className="mx-auto mt-4 max-w-md text-[15px] text-[var(--mg-muted)]">
-            Offre <strong className="text-[var(--mg-ink)]">Site Vitrine — 990 €</strong>{" "}
-            · parfait pour restaurants, artisans et indépendants.
+            Démo réalisée par{" "}
+            <strong className="text-[var(--mg-ink)]">CodeByToma</strong> —
+            abonnement site web pour restaurants, artisans et indépendants.
           </p>
 
           <div className="mt-8 flex flex-wrap items-center justify-center gap-3">

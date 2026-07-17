@@ -6,12 +6,10 @@ import { Check, ArrowRight, Star, ExternalLink } from "lucide-react";
 import Image from "next/image";
 import { cn } from "@/lib/utils";
 import {
-  creationSection,
-  pricingCreation,
+  setupFee,
   subscriptionSection,
   pricingAbonnement,
   surMesureSection,
-  type PricingCreationCard,
   type PricingAbonnementCard,
 } from "@/data/pricing";
 import { showcaseProjects, type ShowcaseProject } from "@/data/businessOffers";
@@ -20,34 +18,6 @@ const MAILTO = "mailto:toma11chang@gmail.com";
 
 const mailtoHref = (subject: string) =>
   `${MAILTO}?subject=${encodeURIComponent(subject)}`;
-
-const SectionHeader = ({
-  label,
-  heading,
-  description,
-}: {
-  label: string;
-  heading: string;
-  description?: string;
-}) => (
-  <motion.div
-    initial={{ opacity: 0, y: 12 }}
-    whileInView={{ opacity: 1, y: 0 }}
-    viewport={{ once: true }}
-    transition={{ duration: 0.4 }}
-    className="max-w-2xl"
-  >
-    <p className="text-[12px] font-medium uppercase tracking-[0.16em] text-mist/70">
-      {label}
-    </p>
-    <h3 className="mt-3 text-xl font-semibold tracking-tight text-snow md:text-2xl">
-      {heading}
-    </h3>
-    {description && (
-      <p className="mt-4 text-[15px] leading-relaxed text-mist">{description}</p>
-    )}
-  </motion.div>
-);
 
 const CtaLink = ({
   href,
@@ -71,176 +41,62 @@ const CtaLink = ({
   </a>
 );
 
-const CreationCard = ({
-  card,
-  index,
-}: {
-  card: PricingCreationCard;
-  index: number;
-}) => {
-  const body = (
-    <>
-      <div className="mb-5 flex flex-wrap items-center gap-2">
-        {card.badge && (
-          <span className="inline-flex items-center gap-1.5 rounded-md bg-snow px-2.5 py-1 text-[11px] font-semibold uppercase tracking-wide text-ink">
-            <Star className="h-3 w-3 fill-current" />
-            {card.badge}
-          </span>
-        )}
-        <span
-          className={cn(
-            "rounded-md border px-2.5 py-1 text-[11px] font-semibold uppercase tracking-wide",
-            card.featured
-              ? "border-snow/30 bg-snow/10 text-snow"
-              : "border-cbtBorder text-mist"
-          )}
-        >
-          {card.styleLabel}
-        </span>
-      </div>
-
-      {card.icon && (
-        <span className="text-2xl" aria-hidden>
-          {card.icon}
-        </span>
-      )}
-
-      <h4
-        className={cn("text-xl font-semibold text-snow", card.icon && "mt-4")}
-      >
-        {card.title}
-      </h4>
-
-      {card.description && (
-        <p className="mt-3 text-[14px] leading-relaxed text-mist">
-          {card.description}
-        </p>
-      )}
-
-      <p className="mt-6 text-2xl font-semibold tracking-tight text-snow md:text-[1.75rem]">
-        {card.price}
-      </p>
-      {card.priceNote && (
-        <p className="mt-1.5 text-[13px] text-mist/80">{card.priceNote}</p>
-      )}
-
-      {card.audience?.length ? (
-        <div className="mt-6 rounded-xl border border-cbtBorder bg-cbtFill/30 p-4">
-          <p className="text-[11px] font-medium uppercase tracking-[0.12em] text-mist/65">
-            Pour
-          </p>
-          <p className="mt-2 text-[13px] leading-relaxed text-snow/90">
-            {card.audience.join(" · ")}
-          </p>
-        </div>
-      ) : null}
-
-      <div className="mt-7 flex-1 border-t border-cbtBorder pt-7">
-        <p className="mb-3 text-[11px] font-medium uppercase tracking-[0.12em] text-mist/65">
-          Inclus
-        </p>
-        <ul className="space-y-2.5">
-          {card.features.map((feature) => (
-            <li key={feature} className="flex gap-2.5 text-[13px] text-mist">
-              <Check
-                className="mt-0.5 h-3.5 w-3.5 shrink-0 text-snow/60"
-                strokeWidth={1.75}
-              />
-              {feature}
-            </li>
-          ))}
-        </ul>
-      </div>
-
-      <CtaLink href={mailtoHref(card.ctaSubject)} featured={card.featured}>
-        {card.cta}
-        <ArrowRight className="h-3.5 w-3.5 transition-transform group-hover:translate-x-0.5" />
-      </CtaLink>
-    </>
-  );
-
-  return (
-    <motion.article
-      initial={{ opacity: 0, y: 20 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true }}
-      transition={{ duration: 0.4, delay: index * 0.06 }}
-      className={cn(
-        "flex h-full flex-col rounded-2xl border p-7 md:p-8",
-        card.featured
-          ? "border-snow/40 bg-surface shadow-[0_12px_48px_-16px_rgba(0,0,0,0.55),0_0_0_1px_var(--cbt-border-strong)]"
-          : "border-cbtBorder bg-transparent hover:border-cbtBorderStrong"
-      )}
-    >
-      {body}
-    </motion.article>
-  );
-};
-
 const AbonnementCard = ({
   card,
   index,
 }: {
   card: PricingAbonnementCard;
   index: number;
-}) => {
-  const body = (
-    <>
-      {card.badge && (
-        <span className="mb-5 inline-flex w-fit items-center gap-1.5 rounded-md bg-snow px-2.5 py-1 text-[11px] font-semibold uppercase tracking-wide text-ink">
-          <Star className="h-3 w-3 fill-current" />
-          {card.badge}
-        </span>
-      )}
+}) => (
+  <motion.article
+    initial={{ opacity: 0, y: 20 }}
+    whileInView={{ opacity: 1, y: 0 }}
+    viewport={{ once: true }}
+    transition={{ duration: 0.4, delay: index * 0.06 }}
+    className={cn(
+      "flex h-full flex-col rounded-2xl border p-7 md:p-8",
+      card.featured
+        ? "border-snow/40 bg-surface shadow-[0_12px_48px_-16px_rgba(0,0,0,0.55),0_0_0_1px_var(--cbt-border-strong)]"
+        : "border-cbtBorder bg-transparent hover:border-cbtBorderStrong"
+    )}
+  >
+    {card.badge && (
+      <span className="mb-5 inline-flex w-fit items-center gap-1.5 rounded-md bg-snow px-2.5 py-1 text-[11px] font-semibold uppercase tracking-wide text-ink">
+        <Star className="h-3 w-3 fill-current" />
+        {card.badge}
+      </span>
+    )}
 
-      <h4 className="text-xl font-semibold text-snow">{card.title}</h4>
-      <p className="mt-2 text-[13px] leading-relaxed text-mist">{card.tagline}</p>
-      <p className="mt-4 text-2xl font-semibold tracking-tight text-snow md:text-[1.75rem]">
-        {card.price}
-        <span className="text-base font-normal text-mist">{card.period}</span>
+    <h3 className="text-xl font-semibold text-snow">{card.title}</h3>
+    <p className="mt-2 text-[13px] leading-relaxed text-mist">{card.tagline}</p>
+    <p className="mt-4 text-2xl font-semibold tracking-tight text-snow md:text-[1.75rem]">
+      {card.price}
+      <span className="text-base font-normal text-mist">{card.period}</span>
+    </p>
+
+    <div className="mt-7 flex-1 border-t border-cbtBorder pt-7">
+      <p className="mb-3 text-[11px] font-medium uppercase tracking-[0.12em] text-mist/65">
+        Inclus
       </p>
+      <ul className="space-y-2.5">
+        {card.features.map((feature) => (
+          <li key={feature} className="flex gap-2.5 text-[13px] text-mist">
+            <Check
+              className="mt-0.5 h-3.5 w-3.5 shrink-0 text-snow/60"
+              strokeWidth={1.75}
+            />
+            {feature}
+          </li>
+        ))}
+      </ul>
+    </div>
 
-      <div className="mt-7 flex-1 border-t border-cbtBorder pt-7">
-        <p className="mb-3 text-[11px] font-medium uppercase tracking-[0.12em] text-mist/65">
-          Inclus
-        </p>
-        <ul className="space-y-2.5">
-          {card.features.map((feature) => (
-            <li key={feature} className="flex gap-2.5 text-[13px] text-mist">
-              <Check
-                className="mt-0.5 h-3.5 w-3.5 shrink-0 text-snow/60"
-                strokeWidth={1.75}
-              />
-              {feature}
-            </li>
-          ))}
-        </ul>
-      </div>
-
-      <CtaLink href={mailtoHref(card.ctaSubject)} featured={card.featured}>
-        {card.cta}
-        <ArrowRight className="h-3.5 w-3.5 transition-transform group-hover:translate-x-0.5" />
-      </CtaLink>
-    </>
-  );
-
-  return (
-    <motion.article
-      initial={{ opacity: 0, y: 20 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true }}
-      transition={{ duration: 0.4, delay: index * 0.06 }}
-      className={cn(
-        "flex h-full flex-col rounded-2xl border p-7 md:p-8",
-        card.featured
-          ? "border-snow/40 bg-surface shadow-[0_12px_48px_-16px_rgba(0,0,0,0.55),0_0_0_1px_var(--cbt-border-strong)]"
-          : "border-cbtBorder bg-transparent hover:border-cbtBorderStrong"
-      )}
-    >
-      {body}
-    </motion.article>
-  );
-};
+    <CtaLink href={mailtoHref(card.ctaSubject)} featured={card.featured}>
+      {card.cta}
+      <ArrowRight className="h-3.5 w-3.5 transition-transform group-hover:translate-x-0.5" />
+    </CtaLink>
+  </motion.article>
+);
 
 const SurMesureBanner = () => (
   <motion.div
@@ -383,55 +239,65 @@ const BusinessOffers = () => {
           className="max-w-2xl"
         >
           <p className="text-[12px] font-medium uppercase tracking-[0.16em] text-mist/70">
-            Nos offres
+            {subscriptionSection.label}
           </p>
           <h2 className="mt-3 text-2xl font-semibold tracking-tight text-snow md:text-[1.85rem]">
-            Création + accompagnement évolutif
+            {subscriptionSection.heading}
           </h2>
           <p className="mt-4 text-[15px] leading-relaxed text-mist md:text-base">
-            Un site en paiement unique pour être crédible en ligne, puis un
-            abonnement pour le faire vivre — et le faire grandir avec votre
-            activité.
+            {subscriptionSection.description}
           </p>
         </motion.div>
 
-        <div className="mt-16">
-          <SectionHeader
-            label={creationSection.label}
-            heading={creationSection.heading}
-            description={creationSection.description}
-          />
-          <div className="mx-auto mt-10 grid max-w-4xl gap-5 lg:grid-cols-2 lg:items-stretch">
-            {pricingCreation.map((card, i) => (
-              <CreationCard key={card.id} card={card} index={i} />
-            ))}
-          </div>
+        <motion.div
+          initial={{ opacity: 0, y: 10 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.35 }}
+          className="mt-10 rounded-xl border border-cbtBorder bg-cbtFill/40 px-5 py-4 text-center sm:px-6"
+        >
+          <p className="text-[14px] font-medium text-snow sm:text-[15px]">
+            {setupFee.label}
+            <span className="font-normal text-mist">
+              {" "}
+              ({setupFee.detail})
+            </span>
+          </p>
+        </motion.div>
+
+        <div className="mt-8 grid gap-5 lg:grid-cols-3 lg:items-stretch">
+          {pricingAbonnement.map((card, i) => (
+            <AbonnementCard key={card.id} card={card} index={i} />
+          ))}
         </div>
 
-        <div className="mt-24 border-t border-cbtBorder pt-24">
-          <SectionHeader
-            label={subscriptionSection.label}
-            heading={subscriptionSection.heading}
-            description={subscriptionSection.description}
-          />
-          <div className="mt-10 grid gap-5 lg:grid-cols-3 lg:items-stretch">
-            {pricingAbonnement.map((card, i) => (
-              <AbonnementCard key={card.id} card={card} index={i} />
-            ))}
-          </div>
-          <p className="mt-8 text-center text-[13px] text-mist/80">
-            {subscriptionSection.commitment}
-          </p>
-        </div>
+        <p className="mt-8 text-center text-[13px] text-mist/80">
+          {subscriptionSection.commitment}
+        </p>
+        <p className="mx-auto mt-3 max-w-2xl text-center text-[12px] leading-relaxed text-mist/60">
+          {subscriptionSection.evolutionNote}
+        </p>
 
         <SurMesureBanner />
 
         <div className="mt-24 border-t border-cbtBorder pt-24">
-          <SectionHeader
-            label="Réalisations"
-            heading="Découvrez nos réalisations"
-            description="Essentiel = moderne & clair · Pro = futuriste & immersif — et du sur-mesure sur demande."
-          />
+          <motion.div
+            initial={{ opacity: 0, y: 12 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.4 }}
+            className="max-w-2xl"
+          >
+            <p className="text-[12px] font-medium uppercase tracking-[0.16em] text-mist/70">
+              Réalisations
+            </p>
+            <h3 className="mt-3 text-xl font-semibold tracking-tight text-snow md:text-2xl">
+              Découvrez nos réalisations
+            </h3>
+            <p className="mt-4 text-[15px] leading-relaxed text-mist">
+              Exemples de sites vitrine — et du sur-mesure sur demande.
+            </p>
+          </motion.div>
           <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
             {showcaseProjects.map((project, i) => (
               <ShowcaseCard key={project.id} project={project} index={i} />

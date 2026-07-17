@@ -88,9 +88,8 @@ const BusinessHero = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.45, delay: 0.2 }}
           >
-            Un site vitrine crédible en paiement unique, puis un abonnement
-            évolutif pour l&apos;hébergement, la maintenance et la visibilité —
-            qui monte en gamme si votre activité le demande.
+            Une présence en ligne professionnelle, sans gros investissement de
+            départ — juste un abonnement qui grandit avec vous.
           </motion.p>
 
           <motion.div

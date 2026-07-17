@@ -5,9 +5,10 @@ import { motion } from "framer-motion";
 import { Check } from "lucide-react";
 
 const points = [
+  "149 € de mise en place — une seule fois",
   "Essentiel : technique & sécurité uniquement",
   "Sérénité : contenu inclus + support prioritaire",
-  "Premium : point mensuel + évolutions du site",
+  "Premium : point mensuel + évolutions légères",
   "Passage d’une formule à l’autre possible",
   "Engagement 12 mois, reconduction tacite",
 ];
@@ -31,7 +32,8 @@ const BusinessSubscription = () => {
             </h2>
             <p className="mt-4 text-[15px] leading-relaxed text-mist md:text-base">
               Chaque formule a un rôle clair : garder le site en ligne, le tenir
-              à jour pour vous, ou le faire évoluer mois après mois.
+              à jour pour vous, ou le faire évoluer mois après mois — après une
+              mise en place à 149 €.
             </p>
             <p className="mt-6 text-[15px] font-medium text-snow">
               Commencez simple, montez en gamme plus tard.

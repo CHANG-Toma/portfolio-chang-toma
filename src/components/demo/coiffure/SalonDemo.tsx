@@ -81,7 +81,7 @@ const SalonDemo = () => {
             Retour CodeByToma
           </Link>
           <span className="text-[11px] font-medium uppercase tracking-[0.14em] text-[var(--sv-muted)]">
-            Démo · Site Essentiel · 590 €
+            Démo · Site Essentiel
           </span>
         </div>
       </div>

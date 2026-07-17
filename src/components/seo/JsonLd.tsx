@@ -63,20 +63,38 @@ const professionalService = {
   offers: [
     {
       "@type": "Offer",
-      name: "Site Essentiel",
-      price: "590",
+      name: "Frais de mise en place",
+      price: "149",
       priceCurrency: "EUR",
       description:
-        "Site vitrine moderne, 3–4 pages, mobile, formulaire de contact.",
+        "Création de votre site vitrine, quel que soit le palier d'abonnement choisi.",
       url: `${SITE_URL}/#offres`,
     },
     {
       "@type": "Offer",
-      name: "Site Vitrine Pro",
-      price: "990",
+      name: "Abonnement Essentiel",
+      price: "29",
       priceCurrency: "EUR",
       description:
-        "Site immersif futuriste avec animations et effets avancés.",
+        "Hébergement, SSL, sauvegardes, monitoring et support e-mail.",
+      url: `${SITE_URL}/#offres`,
+    },
+    {
+      "@type": "Offer",
+      name: "Abonnement Sérénité",
+      price: "79",
+      priceCurrency: "EUR",
+      description:
+        "Tout Essentiel + 2 modifications de contenu / mois, SEO de base et support prioritaire.",
+      url: `${SITE_URL}/#offres`,
+    },
+    {
+      "@type": "Offer",
+      name: "Abonnement Premium",
+      price: "199",
+      priceCurrency: "EUR",
+      description:
+        "Tout Sérénité + point mensuel et jusqu'à 3h d'évolutions légères / mois.",
       url: `${SITE_URL}/#offres`,
     },
   ],

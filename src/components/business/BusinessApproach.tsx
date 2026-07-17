@@ -24,14 +24,14 @@ const BusinessApproach = () => {
           </h2>
           <div className="mt-6 max-w-2xl space-y-4 text-[15px] leading-relaxed text-mist md:text-base">
             <p>
-              Nous créons votre site vitrine pour vous rendre visible et
-              crédible, puis nous gérons l&apos;hébergement, la maintenance et
-              la performance au quotidien.
+              Nous créons votre site avec de petits frais de mise en place, puis
+              nous gérons l&apos;hébergement, la maintenance et la performance
+              au quotidien via votre abonnement.
             </p>
             <p className="text-snow">
-              Quand votre activité grandit, votre abonnement peut intégrer des
-              fonctionnalités métier — réservation, devis, espace client — sans
-              tout recommencer.
+              Quand votre activité grandit, montez de palier ou passez en
+              sur-mesure — réservation, devis, espace client — sans tout
+              recommencer.
             </p>
           </div>
         </motion.div>

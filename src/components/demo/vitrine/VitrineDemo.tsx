@@ -96,7 +96,7 @@ const VitrineDemo = () => {
             Retour CodeByToma
           </Link>
           <span className="text-[11px] font-semibold uppercase tracking-[0.14em] text-white/50">
-            Démo · Site Vitrine · 990 €
+            Démo · Site vitrine
           </span>
         </div>
       </div>
@@ -298,7 +298,7 @@ const VitrineDemo = () => {
                 "Sans pression",
                 "Résultats concrets",
                 "Suivi humain",
-                "Site Vitrine 990 €",
+                "Site Vitrine démo",
               ].map((label) => (
                 <span key={`${loop}-${label}`} className="flex items-center gap-10">
                   {label}
@@ -522,7 +522,7 @@ const VitrineDemo = () => {
             </h2>
             <p className="mt-4 max-w-md text-[15px] text-white/65">
               Démo vitrine coaching — offre{" "}
-              <strong className="text-white">Site Vitrine — 990 €</strong> chez
+              <strong className="text-white">CodeByToma</strong> chez
               CodeByToma.
             </p>
             <div className="mt-8 flex flex-wrap gap-3">

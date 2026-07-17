@@ -1,9 +1,10 @@
 "use client";
 
 const items = [
-  "Site Essentiel",
-  "Site Pro futuriste",
-  "Abonnement évolutif",
+  "Mise en place 149 €",
+  "Abonnement Essentiel",
+  "Abonnement Sérénité",
+  "Abonnement Premium",
   "Sur-mesure",
   "Devis gratuit",
   "CodeByToma",

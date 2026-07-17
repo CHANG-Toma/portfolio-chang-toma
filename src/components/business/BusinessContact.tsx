@@ -23,8 +23,8 @@ const BusinessContact = () => {
               Prêt à développer votre présence en ligne&nbsp;?
             </h2>
             <p className="mt-4 max-w-lg text-[15px] leading-relaxed text-mist md:text-base">
-              Site Essentiel (moderne) dès 590 €, Pro futuriste dès 990 €, puis
-              abonnement évolutif dès 29 €/mois — et du sur-mesure si besoin.
+              Mise en place 149 €, puis abonnement dès 29 €/mois — et du
+              sur-mesure si votre activité le demande.
             </p>
             <a
               href="mailto:toma11chang@gmail.com?subject=CodeByToma%20—%20Devis%20gratuit"

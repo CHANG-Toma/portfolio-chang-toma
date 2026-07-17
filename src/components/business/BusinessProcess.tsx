@@ -6,15 +6,15 @@ import { motion } from "framer-motion";
 const steps = [
   {
     title: "On crée votre site",
-    text: "Un site vitrine sur-mesure, adapté à votre activité, pour être visible et crédible en ligne.",
+    text: "Frais de mise en place unique de 149 € — votre site est prêt rapidement, sans gros investissement de départ.",
   },
   {
     title: "On s’occupe de tout",
-    text: "Hébergement, sécurité, maintenance et visibilité continue via un abonnement mensuel.",
+    text: "Hébergement, sécurité, maintenance et visibilité continue via votre abonnement mensuel.",
   },
   {
     title: "Ça évolue avec vous",
-    text: "Si votre activité grandit, l’abonnement peut intégrer réservation, devis, espace client… sans tout refaire.",
+    text: "Montez de palier ou passez en sur-mesure quand votre activité le demande — sans tout recommencer.",
   },
 ];
 
@@ -39,8 +39,8 @@ const BusinessProcess = () => {
             Création, accompagnement, évolution
           </h2>
           <p className="mt-4 text-[15px] leading-relaxed text-mist md:text-base">
-            Les freelances et PME gagnent en crédibilité avec un site pro —
-            puis un suivi qui s’adapte à leur croissance.
+            Un démarrage simple avec 149 € de mise en place, puis un abonnement
+            qui s’adapte à votre croissance.
           </p>
         </motion.div>
 
