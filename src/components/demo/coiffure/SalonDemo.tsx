@@ -81,7 +81,7 @@ const SalonDemo = () => {
             Retour CodeByToma
           </Link>
           <span className="text-[11px] font-medium uppercase tracking-[0.14em] text-[var(--sv-muted)]">
-            Démo · Site Essentiel
+            Démo · Site vitrine
           </span>
         </div>
       </div>
@@ -413,9 +413,10 @@ const SalonDemo = () => {
           </p>
           <p className="text-[12px] text-[var(--sv-muted)]">
             Démo fictive · réalisée par{" "}
-            <Link href="/" className="underline underline-offset-2 hover:text-[var(--sv-ink)]">
+            <Link href="/#offres" className="underline underline-offset-2 hover:text-[var(--sv-ink)]">
               CodeByToma
             </Link>
+            {" "}— création 149 € + abonnement
           </p>
         </div>
       </footer>

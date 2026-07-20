@@ -46,11 +46,14 @@ const BlurText: React.FC<BlurTextProps> = ({
   as: Tag = 'p',
 }) => {
   const elements = animateBy === 'words' ? text.split(' ') : text.split('');
+  const [mounted, setMounted] = useState(false);
   const [inView, setInView] = useState(false);
   const ref = useRef<HTMLElement>(null);
 
+  useEffect(() => setMounted(true), []);
+
   useEffect(() => {
-    if (!ref.current) return;
+    if (!mounted || !ref.current) return;
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
@@ -62,7 +65,7 @@ const BlurText: React.FC<BlurTextProps> = ({
     );
     observer.observe(ref.current);
     return () => observer.disconnect();
-  }, [threshold, rootMargin]);
+  }, [mounted, threshold, rootMargin]);
 
   const defaultFrom = useMemo(
     () =>
@@ -88,6 +91,10 @@ const BlurText: React.FC<BlurTextProps> = ({
   const stepCount = toSnapshots.length + 1;
   const totalDuration = stepDuration * (stepCount - 1);
   const times = Array.from({ length: stepCount }, (_, i) => (stepCount === 1 ? 0 : i / (stepCount - 1)));
+
+  if (!mounted) {
+    return <Tag className={className}>{text}</Tag>;
+  }
 
   return (
     <Tag ref={ref as never} className={`blur-text ${className} flex flex-wrap`}>

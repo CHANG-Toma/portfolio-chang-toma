@@ -1,7 +1,8 @@
 "use client";
 
 const items = [
-  "Mise en place 149 €",
+  "Création 149 €",
+  "Abonnement dès 49 €/mois",
   "Abonnement Essentiel",
   "Abonnement Sérénité",
   "Abonnement Premium",

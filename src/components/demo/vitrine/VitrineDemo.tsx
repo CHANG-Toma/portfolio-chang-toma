@@ -521,9 +521,9 @@ const VitrineDemo = () => {
               Prêt·e à te sentir mieux ?
             </h2>
             <p className="mt-4 max-w-md text-[15px] text-white/65">
-              Démo vitrine coaching — offre{" "}
-              <strong className="text-white">CodeByToma</strong> chez
-              CodeByToma.
+              Démo vitrine coaching réalisée par{" "}
+              <strong className="text-white">CodeByToma</strong> — création
+              149 €, puis abonnement dès 49 €/mois.
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
               <Link
@@ -549,9 +549,10 @@ const VitrineDemo = () => {
           <p className="font-extrabold">aria</p>
           <p className="text-[12px] text-[var(--vk-muted)]">
             Démo ·{" "}
-            <Link href="/" className="text-[var(--vk-ink)] hover:underline">
+            <Link href="/#offres" className="text-[var(--vk-ink)] hover:underline">
               CodeByToma
             </Link>
+            {" "}— création 149 € + abonnement
           </p>
         </div>
       </footer>

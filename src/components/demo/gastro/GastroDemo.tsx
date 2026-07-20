@@ -336,7 +336,8 @@ const GastroDemo = () => {
           <p className="mx-auto mt-4 max-w-md text-[15px] text-[var(--mg-muted)]">
             Démo réalisée par{" "}
             <strong className="text-[var(--mg-ink)]">CodeByToma</strong> —
-            abonnement site web pour restaurants, artisans et indépendants.
+            création 149 €, puis abonnement site web pour restaurants, artisans
+            et indépendants.
           </p>
 
           <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
@@ -372,9 +373,10 @@ const GastroDemo = () => {
           </p>
           <p className="text-[12px] text-[var(--mg-muted)]">
             Démo fictive ·{" "}
-            <Link href="/" className="cursor-target text-[var(--mg-ink)] hover:underline">
+            <Link href="/#offres" className="cursor-target text-[var(--mg-ink)] hover:underline">
               CodeByToma
             </Link>
+            {" "}— création 149 € + abonnement
           </p>
         </div>
       </footer>

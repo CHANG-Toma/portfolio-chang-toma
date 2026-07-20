@@ -7,7 +7,7 @@ import { cn } from "@/lib/utils";
 import { offersFaq } from "@/data/businessOffers";
 
 const BusinessFaq = () => {
-  const [open, setOpen] = useState<number | null>(0);
+  const [open, setOpen] = useState<number | null>(null);
 
   return (
     <section

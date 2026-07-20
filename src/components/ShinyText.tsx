@@ -28,17 +28,20 @@ const ShinyText: React.FC<ShinyTextProps> = ({
   direction = 'left',
   delay = 0
 }) => {
+  const [mounted, setMounted] = useState(false);
   const [isPaused, setIsPaused] = useState(false);
   const progress = useMotionValue(0);
   const elapsedRef = useRef(0);
   const lastTimeRef = useRef<number | null>(null);
   const directionRef = useRef(direction === 'left' ? 1 : -1);
 
+  useEffect(() => setMounted(true), []);
+
   const animationDuration = speed * 1000;
   const delayDuration = delay * 1000;
 
   useAnimationFrame(time => {
-    if (disabled || isPaused) {
+    if (!mounted || disabled || isPaused) {
       lastTimeRef.current = null;
       return;
     }
@@ -115,6 +118,14 @@ const ShinyText: React.FC<ShinyTextProps> = ({
     backgroundClip: 'text',
     WebkitTextFillColor: 'transparent'
   };
+
+  if (!mounted) {
+    return (
+      <span className={`inline-block ${className}`} style={{ color }}>
+        {text}
+      </span>
+    );
+  }
 
   return (
     <motion.span

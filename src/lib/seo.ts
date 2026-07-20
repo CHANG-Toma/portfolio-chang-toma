@@ -9,14 +9,14 @@ export const SITE_NAME_ALIASES = [
 ] as const;
 
 export const SITE_TAGLINE =
-  "Abonnement site web pour freelances & PME — dès 39 €/mois";
+  "Création de site 149 € + abonnement pour freelances & PME — dès 49 €/mois";
 
 /**
  * Description Google (~150–160 car. max).
- * Modèle : frais de mise en place + abonnement.
+ * Modèle : création 149 € + abonnement.
  */
 export const SITE_DESCRIPTION =
-  "Code by Toma : site en ligne dès 149 € de mise en place, puis abonnement dès 39 €/mois. Devis gratuit.";
+  "Code by Toma : création de site 149 €, puis abonnement dès 49 €/mois. Devis gratuit.";
 
 export const SITE_TITLE_DEFAULT = "CodeByToma";
 export const SITE_TITLE_HOME = "CodeByToma";
@@ -25,7 +25,7 @@ export const OG_IMAGE = {
   url: "/images/og-image.png",
   width: 1200,
   height: 630,
-  alt: "CodeByToma — Code by Toma, abonnement site web",
+  alt: "CodeByToma — création 149 € et abonnement site web",
   type: "image/png",
 } as const;
 
@@ -43,7 +43,7 @@ export const SITE_KEYWORDS = [
   "développeur web Île-de-France",
   "maintenance site web",
   "hébergement site web inclus",
-  "frais de mise en place site web",
+  "création site web 149 euros",
   "agence web indépendant",
 ] as const;
 

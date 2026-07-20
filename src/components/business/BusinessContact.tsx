@@ -23,7 +23,7 @@ const BusinessContact = () => {
               Prêt à développer votre présence en ligne&nbsp;?
             </h2>
             <p className="mt-4 max-w-lg text-[15px] leading-relaxed text-mist md:text-base">
-              Mise en place 149 €, puis abonnement dès 39 €/mois — et du
+              Création 149 €, puis abonnement dès 49 €/mois — et du
               sur-mesure si votre activité le demande.
             </p>
             <a

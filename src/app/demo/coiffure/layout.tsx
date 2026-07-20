@@ -17,7 +17,7 @@ const body = Outfit({
 export const metadata: Metadata = {
   title: "Atelier Sève — Démo Salon de Coiffure",
   description:
-    "Démonstration CodeByToma : site vitrine pour salon de coiffure, design moderne et élégant.",
+    "Exemple CodeByToma : site vitrine salon de coiffure — création 149 €, abonnement dès 49 €/mois.",
   robots: { index: false, follow: false },
 };
 

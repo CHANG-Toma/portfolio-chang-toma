@@ -15,6 +15,7 @@ const ThemeProvider = ({ children }: Props) => {
       enableSystem={false}
       storageKey="codebytoma-theme"
       disableTransitionOnChange
+      enableColorScheme={false}
     >
       {children}
     </NextThemesProvider>

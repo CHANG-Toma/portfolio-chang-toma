@@ -5,12 +5,12 @@ import { motion } from "framer-motion";
 import { Check } from "lucide-react";
 
 const points = [
-  "149 € de mise en place — une seule fois",
-  "Essentiel : technique & sécurité uniquement",
-  "Sérénité : contenu inclus + support prioritaire",
-  "Premium : point mensuel + évolutions légères",
-  "Passage d’une formule à l’autre possible",
-  "Engagement 12 mois, reconduction tacite",
+  "149 € une seule fois pour créer votre site",
+  "Essentiel (49 €) : site en ligne et sécurisé, sans rien gérer",
+  "Sérénité (65 €) : on met aussi à jour votre contenu (2× / mois)",
+  "Premium (159 €) : 5 mises à jour / mois, évolutions régulières et suivi mensuel",
+  "Vous pouvez changer de formule plus tard",
+  "Engagement 12 mois, puis renouvellement automatique",
 ];
 
 const BusinessSubscription = () => {
@@ -31,9 +31,9 @@ const BusinessSubscription = () => {
               Pourquoi choisir un abonnement&nbsp;?
             </h2>
             <p className="mt-4 text-[15px] leading-relaxed text-mist md:text-base">
-              Chaque formule a un rôle clair : garder le site en ligne, le tenir
-              à jour pour vous, ou le faire évoluer mois après mois — après une
-              mise en place à 149 €.
+              Vous payez une fois la création (149 €), puis un forfait mensuel
+              selon le niveau d&apos;accompagnement souhaité : Essentiel (49
+              €), Sérénité (65 €), Premium (159 €).
             </p>
             <p className="mt-6 text-[15px] font-medium text-snow">
               Commencez simple, montez en gamme plus tard.

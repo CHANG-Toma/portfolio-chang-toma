@@ -63,7 +63,7 @@ const professionalService = {
   offers: [
     {
       "@type": "Offer",
-      name: "Frais de mise en place",
+      name: "Création du site",
       price: "149",
       priceCurrency: "EUR",
       description:
@@ -73,28 +73,28 @@ const professionalService = {
     {
       "@type": "Offer",
       name: "Abonnement Essentiel",
-      price: "39",
+      price: "49",
       priceCurrency: "EUR",
       description:
-        "Hébergement, SSL, sauvegardes, monitoring et support e-mail.",
+        "Jusqu'à 3 pages, hébergement, SSL, sauvegarde hebdomadaire, monitoring et support e-mail.",
       url: `${SITE_URL}/#offres`,
     },
     {
       "@type": "Offer",
       name: "Abonnement Sérénité",
-      price: "79",
+      price: "65",
       priceCurrency: "EUR",
       description:
-        "Tout Essentiel + 2 modifications de contenu / mois, SEO de base et support prioritaire.",
+        "2 modifications de contenu / mois incluses, sauvegarde quotidienne, SEO de base et support prioritaire.",
       url: `${SITE_URL}/#offres`,
     },
     {
       "@type": "Offer",
       name: "Abonnement Premium",
-      price: "199",
+      price: "159",
       priceCurrency: "EUR",
       description:
-        "Tout Sérénité + point mensuel et jusqu'à 3h d'évolutions légères / mois.",
+        "Pages illimitées, tout Sérénité, 5 mises à jour / mois, point mensuel 15 min, 3 h d'évolutions / mois, rapport de visibilité et changement de thème possible.",
       url: `${SITE_URL}/#offres`,
     },
   ],

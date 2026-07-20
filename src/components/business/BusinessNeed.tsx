@@ -24,9 +24,10 @@ const BusinessNeed = () => {
               Un partenaire digital, pas une prestation one-shot.
             </h2>
             <p className="mt-5 max-w-2xl text-[15px] leading-relaxed text-mist">
-              Indépendants et PME veulent une présence en ligne claire, sans gérer
-              technique, hébergement ou sécurité. CodeByToma s&apos;en charge et
-              reste disponible dans la durée.
+              Indépendants et PME veulent une présence en ligne claire, sans gros
+              budget de départ. CodeByToma crée votre site à 149 €, puis gère
+              technique, hébergement et sécurité via l&apos;abonnement — et reste
+              disponible dans la durée.
             </p>
           </motion.div>
         </div>

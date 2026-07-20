@@ -88,8 +88,8 @@ const BusinessHero = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.45, delay: 0.2 }}
           >
-            Une présence en ligne professionnelle, sans gros investissement de
-            départ — juste un abonnement qui grandit avec vous.
+            Une présence en ligne professionnelle, dès 149 € de création puis
+            un abonnement qui grandit avec vous.
           </motion.p>
 
           <motion.div

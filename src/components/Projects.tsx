@@ -29,7 +29,7 @@ const Projects = () => {
     {
       title: 'CodeByToma',
       description:
-        "Site de mon auto-entreprise : offres de création (site vitrine, application web, e-commerce) et abonnement maintenance.",
+        "Site de mon auto-entreprise : création de sites vitrine à 149 €, abonnements Essentiel / Sérénité / Premium et projets sur-mesure.",
       technologies: ['React', 'Next.js', 'Tailwind CSS', 'Vercel'],
       demo: 'https://www.codebytoma.dev/',
     },

@@ -24,8 +24,7 @@ const BusinessApproach = () => {
           </h2>
           <div className="mt-6 max-w-2xl space-y-4 text-[15px] leading-relaxed text-mist md:text-base">
             <p>
-              Nous créons votre site avec de petits frais de mise en place, puis
-              nous gérons l&apos;hébergement, la maintenance et la performance
+              Nous créons votre site (149 €), puis nous gérons l&apos;hébergement, la maintenance et la performance
               au quotidien via votre abonnement.
             </p>
             <p className="text-snow">

@@ -6,15 +6,15 @@ import { motion } from "framer-motion";
 const steps = [
   {
     title: "On crée votre site",
-    text: "Frais de mise en place unique de 149 € — votre site est prêt rapidement, sans gros investissement de départ.",
+    text: "149 € une seule fois : design, pages essentielles, formulaire de contact — prêt à accueillir vos clients.",
   },
   {
-    title: "On s’occupe de tout",
-    text: "Hébergement, sécurité, maintenance et visibilité continue via votre abonnement mensuel.",
+    title: "On le garde en ligne pour vous",
+    text: "L'abonnement mensuel couvre la mise en ligne, la sécurité et la maintenance. Vous n'avez rien à installer ni à configurer.",
   },
   {
-    title: "Ça évolue avec vous",
-    text: "Montez de palier ou passez en sur-mesure quand votre activité le demande — sans tout recommencer.",
+    title: "Vous faites évoluer quand vous voulez",
+    text: "Besoin de mises à jour régulières ou de nouvelles sections ? On monte de formule ou on passe en sur-mesure, sans tout recommencer.",
   },
 ];
 
@@ -39,7 +39,7 @@ const BusinessProcess = () => {
             Création, accompagnement, évolution
           </h2>
           <p className="mt-4 text-[15px] leading-relaxed text-mist md:text-base">
-            Un démarrage simple avec 149 € de mise en place, puis un abonnement
+            Un démarrage simple avec 149 € de création, puis un abonnement
             qui s’adapte à votre croissance.
           </p>
         </motion.div>

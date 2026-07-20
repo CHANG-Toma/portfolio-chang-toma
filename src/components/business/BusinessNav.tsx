@@ -7,8 +7,8 @@ import { createPortal } from "react-dom";
 import ThemeToggle from "./ThemeToggle";
 
 const navItems = [
-  { name: "Offres", href: "#offres" },
   { name: "Méthode", href: "#processus" },
+  { name: "Offres", href: "#offres" },
   { name: "FAQ", href: "#faq" },
   { name: "Contact", href: "#contact" },
 ];
