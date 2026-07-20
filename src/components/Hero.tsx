@@ -137,15 +137,15 @@ const Hero = () => {
             className="relative"
           >
             <div className="absolute inset-0 bg-gray-200 rounded-full blur-2xl opacity-20 animate-pulse"></div>
-            <div className="relative overflow-hidden w-60 h-60 md:w-80 md:h-80 rounded-full transition-all duration-300">
+            <div className="relative h-60 w-60 overflow-hidden rounded-full bg-white transition-all duration-300 md:h-80 md:w-80">
               <Image
                 ref={imageRef}
-                src="/images/CodeByToma.png" 
-                alt="Logo CodeByToma"
-                width={320}
-                height={320}
+                src="/images/logo-codebytoma.png"
+                alt="Logo Code By Toma — Développeur Informatique"
+                fill
+                sizes="(max-width: 768px) 240px, 320px"
                 priority={true}
-                className="w-full h-full transition-all duration-300 object-cover rounded-full"
+                className="scale-[1.38] rounded-full object-cover object-center transition-all duration-300"
               />
             </div>
           </motion.div>

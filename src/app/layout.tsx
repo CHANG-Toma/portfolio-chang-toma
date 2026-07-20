@@ -8,6 +8,7 @@ import {
   OG_IMAGE,
   SITE_DESCRIPTION,
   SITE_KEYWORDS,
+  SITE_LOGO,
   SITE_NAME,
   SITE_TITLE_DEFAULT,
   SITE_URL,
@@ -80,8 +81,8 @@ export const metadata: Metadata = {
     images: [OG_IMAGE.url],
   },
   icons: {
-    icon: [{ url: "/images/CodeByToma.png", type: "image/png" }],
-    apple: [{ url: "/images/CodeByToma.png" }],
+    icon: [{ url: SITE_LOGO.url, type: "image/png" }],
+    apple: [{ url: SITE_LOGO.url }],
   },
   formatDetection: {
     email: false,

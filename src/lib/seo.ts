@@ -21,6 +21,14 @@ export const SITE_DESCRIPTION =
 export const SITE_TITLE_DEFAULT = "CodeByToma";
 export const SITE_TITLE_HOME = "CodeByToma";
 
+/** Logo marque (circulaire, noir sur blanc). */
+export const SITE_LOGO = {
+  url: "/images/logo-codebytoma.png",
+  alt: "Logo Code By Toma — Développeur Informatique",
+  width: 512,
+  height: 512,
+} as const;
+
 export const OG_IMAGE = {
   url: "/images/og-image.png",
   width: 1200,

@@ -28,9 +28,9 @@ export const showcaseProjects: ShowcaseProject[] = [
     type: "Site vitrine",
     style: "Essentiel",
     url: "/demo/vitrine",
-    image: "/images/showcase/aria-coach.jpg",
-    previewFrom: "from-orange-400",
-    previewTo: "to-indigo-500",
+    image: "/images/showcase/aria-coach-studio.jpg",
+    previewFrom: "from-stone-700",
+    previewTo: "to-emerald-950",
     live: true,
   },
   {

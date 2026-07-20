@@ -22,6 +22,9 @@ const BusinessFooter = () => {
           </p>
         </div>
         <nav aria-label="Pied de page" className="flex flex-wrap gap-x-5 gap-y-2 text-[12px] text-mist">
+          <a href="#processus" className="transition-colors hover:text-snow">
+            Méthode
+          </a>
           <a href="#offres" className="transition-colors hover:text-snow">
             Offres
           </a>

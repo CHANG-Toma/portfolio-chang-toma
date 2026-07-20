@@ -215,7 +215,7 @@ const ProjectPreview = ({ project }: { project: ShowcaseProject }) => (
         src={project.image}
         alt={`Aperçu ${project.name}`}
         fill
-        className="object-cover object-top"
+        className="object-cover object-top transition-transform duration-500 ease-out group-hover:scale-110"
         sizes="(max-width: 768px) 100vw, 33vw"
       />
     ) : (
@@ -256,9 +256,9 @@ const ShowcaseCard = ({
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 0.4, delay: index * 0.08 }}
-      className="group flex flex-col overflow-hidden rounded-2xl border border-cbtBorder bg-surface/40 transition-colors hover:border-cbtBorderStrong"
+      className="group flex flex-col overflow-hidden rounded-2xl border border-cbtBorder bg-surface/40 transition-all duration-300 hover:z-10 hover:-translate-y-1.5 hover:scale-[1.03] hover:border-cbtBorderStrong hover:shadow-[0_24px_48px_-20px_rgba(0,0,0,0.6)]"
     >
-      <div className="p-3 pb-0">
+      <div className="overflow-hidden p-3 pb-0">
         <ProjectPreview project={project} />
       </div>
 
@@ -325,7 +325,7 @@ const BusinessOffers = () => {
           </div>
         </div>
 
-        <p className="mt-8 text-center text-[13px] text-mist/80">
+        <p className="mt-10 text-center text-[13px] text-mist/80">
           {subscriptionSection.commitment}
         </p>
         <p className="mx-auto mt-3 max-w-2xl text-center text-[12px] leading-relaxed text-mist/60">

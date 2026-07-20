@@ -2,6 +2,7 @@ import { offersFaq } from "@/data/businessOffers";
 import {
   CONTACT,
   SITE_DESCRIPTION,
+  SITE_LOGO,
   SITE_NAME,
   SITE_NAME_ALIASES,
   SITE_TAGLINE,
@@ -17,9 +18,9 @@ const organization = {
   url: SITE_URL,
   logo: {
     "@type": "ImageObject",
-    url: `${SITE_URL}/images/CodeByToma.png`,
+    url: `${SITE_URL}${SITE_LOGO.url}`,
   },
-  image: `${SITE_URL}/images/CodeByToma.png`,
+  image: `${SITE_URL}${SITE_LOGO.url}`,
   email: CONTACT.email,
   telephone: CONTACT.phone,
   founder: {
@@ -27,7 +28,7 @@ const organization = {
     name: "Toma Chang",
     alternateName: ["Toma", "Code by Toma"],
     url: SITE_URL,
-    jobTitle: "Développeur Full-Stack",
+    jobTitle: "Développeur Informatique",
   },
   sameAs: [] as string[],
   areaServed: {
@@ -43,7 +44,7 @@ const professionalService = {
   alternateName: [...SITE_NAME_ALIASES],
   description: SITE_DESCRIPTION,
   url: SITE_URL,
-  image: `${SITE_URL}/images/CodeByToma.png`,
+  image: `${SITE_URL}${SITE_LOGO.url}`,
   telephone: CONTACT.phone,
   email: CONTACT.email,
   priceRange: "€€",
@@ -67,7 +68,7 @@ const professionalService = {
       price: "149",
       priceCurrency: "EUR",
       description:
-        "Création de votre site vitrine, quel que soit le palier d'abonnement choisi.",
+        "Conception, développement et mise en ligne de votre site, quel que soit l'abonnement choisi.",
       url: `${SITE_URL}/#offres`,
     },
     {
